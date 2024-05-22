@@ -71,6 +71,13 @@ body {
 
 .inicio {
     background-image: url('/img/background-1.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contenido {
@@ -78,9 +85,30 @@ body {
 }
 
 section {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ccc;
+    height: 100vh;
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#shows {
     background-color: #f9f9f9;
 }
 
+#banda {
+    background-color: #e9e9e9;
+}
+
+#discografica {
+    background-color: #d9d9d9;
+}
+
+#galeria {
+    background-color: #c9c9c9;
+}
+
+#contacto {
+    background-color: #b9b9b9;
+}
