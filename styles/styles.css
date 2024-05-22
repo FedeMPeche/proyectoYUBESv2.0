@@ -1,0 +1,86 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+}
+
+/* PÁGINA 1 */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    left: 50%;
+}
+
+.logo {
+    height: 75px; 
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+.nombreBanda {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+    font-weight: bold;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.nav-list a:hover {
+    background-color: #814f04;
+    border-radius: 4px;
+}
+
+.inicio {
+    background-image: url('/img/background-1.webp');
+}
+
+.contenido {
+    padding-top: 75px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
