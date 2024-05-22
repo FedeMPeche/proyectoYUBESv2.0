@@ -12,7 +12,6 @@ body {
 section {
     padding-top: 75px;
     height: 100vh;
-    padding-top: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,9 +56,10 @@ section {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
-    margin-left: 20%;
     font-weight: bold;
+    margin-right: 10%;
 }
 
 .nav-list li {
@@ -97,7 +97,14 @@ section {
     font-weight: bold;
     font-size: 26px;
     margin-top: -50%;
+}
 
+.audio-controls #previousButton,
+.audio-controls #playButton,
+.audio-controls #pauseButton,
+.audio-controls #nextButton {
+    width: 96px;
+    height: 96px;
 }
 
 
