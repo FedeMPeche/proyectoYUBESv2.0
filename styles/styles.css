@@ -9,6 +9,17 @@ body {
 
 /* PÁGINA 1 */
 
+section {
+    padding-top: 75px;
+    height: 100vh;
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
 .navbar {
     width: 100%;
     height: 75px;
@@ -78,20 +89,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.contenido {
     padding-top: 75px;
 }
 
-section {
-    height: 100vh;
-    padding-top: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+#player-title {
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: -50%;
+
 }
+
 
 #shows {
     background-color: #f9f9f9;
