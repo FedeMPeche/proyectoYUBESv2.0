@@ -70,7 +70,7 @@ body {
 }
 
 .inicio {
-    background-image: url('/img/background-1.webp');
+    background-image: url('../img/background-1.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
