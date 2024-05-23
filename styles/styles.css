@@ -99,13 +99,19 @@ section {
     margin-top: -50%;
 }
 
-.audio-controls #previousButton,
+.audio-controls button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* .audio-controls #previousButton,
 .audio-controls #playButton,
 .audio-controls #pauseButton,
 .audio-controls #nextButton {
     width: 96px;
     height: 96px;
-}
+} */
 
 
 #shows {
