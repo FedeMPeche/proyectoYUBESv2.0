@@ -122,8 +122,6 @@ function playSong() {
   isPaused = false;
 }
 
-document.documentElement.style.setProperty('--title-width', `${titleWidth}px`);
-
 const buttons = document.querySelectorAll("#audio-controls button");
 buttons.forEach(button => {
   button.addEventListener("click", () => {
@@ -135,8 +133,6 @@ buttons.forEach(button => {
 });
 
 // EVENTO DE CLICK PARA CAMBIAR DE COLOR EL NOMBRE DE LAS SECCIONES //
-
-// script.js
 
 document.addEventListener('DOMContentLoaded', function() {
   const sections = document.querySelectorAll('section');

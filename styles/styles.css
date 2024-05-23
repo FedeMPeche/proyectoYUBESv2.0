@@ -121,6 +121,10 @@ li#redes {
     border-radius: 4px;
 }
 
+.nav-list li a.active {
+    color: var(--secciones);
+}
+
 .inicio {
     background-image: url('../img/background-1.webp');
     background-size: cover;
