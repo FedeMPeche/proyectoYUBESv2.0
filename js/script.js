@@ -118,7 +118,7 @@ function playSong() {
   songTitle.textContent = songTitles[currentSongIndex];
   songInfo.style.opacity = 1;
   audio.play();
-  playPauseIcon.src = "/img/pause.png";
+  playPauseIcon.src = "../img/pause.png";
   isPaused = false;
 }
 
