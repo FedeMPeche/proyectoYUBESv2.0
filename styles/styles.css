@@ -79,7 +79,6 @@ li#redes {
 .navbar .nav-list li a.fa {
     font-size: 24px;
     position: relative;
-    transition: all 0,3s ease-in-out;
     border-radius: 20%;
 }
 
