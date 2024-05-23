@@ -48,11 +48,11 @@ playPauseButton.addEventListener("click", function() {
       audio.addEventListener('ended', playNextSong);
     }
     audio.play();
-    playPauseIcon.src = "/img/pause.png";
+    playPauseIcon.src = "../img/pause.png";
     isPaused = false;
   } else {
     audio.pause();
-    playPauseIcon.src = "/img/play.png";
+    playPauseIcon.src = "../img/play.png";
     isPaused = true;
   }
 });
