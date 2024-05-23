@@ -137,14 +137,17 @@ buttons.forEach(button => {
 document.addEventListener('DOMContentLoaded', function() {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-list li a');
+  const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
   function changeActiveLink() {
       let index = sections.length;
 
-      while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
-      
+      while (--index && window.scrollY + navbarHeight + 1 < sections[index].offsetTop) {}
+
       navLinks.forEach((link) => link.classList.remove('active'));
-      navLinks[index].classList.add('active');
+      if (index >= 0) {
+          navLinks[index].classList.add('active');
+      }
   }
 
   function scrollToSection(event) {
@@ -153,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetSection = document.querySelector(targetId);
 
       window.scrollTo({
-          top: targetSection.offsetTop,
+          top: targetSection.offsetTop - navbarHeight,
           behavior: 'smooth'
       });
 
@@ -169,3 +172,4 @@ document.addEventListener('DOMContentLoaded', function() {
   changeActiveLink();
   window.addEventListener('scroll', changeActiveLink);
 });
+
