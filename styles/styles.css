@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -60,10 +64,47 @@ section {
     justify-content: center;
     font-weight: bold;
     margin-right: 10%;
+    margin-left: 15%;
 }
 
 .nav-list li {
     margin: 0 15px;
+}
+
+li#redes {
+    margin: 0 15px;
+    margin-left: 15%;
+}
+
+.navbar .nav-list li a.fa {
+    font-size: 24px;
+    position: relative;
+    transition: all 0,3s ease-in-out;
+    border-radius: 20%;
+}
+
+:root {
+    --secciones: #814f04;
+    --facebook: #3b5999;
+    --instagram: #c90f5c;
+    --youtube: #bd081c;
+    --spotify: #047a04;
+}
+
+.nav-list a#instagram:hover {
+    background-color: var(--instagram);
+}
+
+.nav-list a#spotify:hover {
+    background-color: var(--spotify);
+}
+
+.nav-list a#youtube:hover {
+    background-color: var(--youtube);
+}
+
+.nav-list a#facebook:hover {
+    background-color: var(--facebook);
 }
 
 .nav-list a {
@@ -76,7 +117,7 @@ section {
 }
 
 .nav-list a:hover {
-    background-color: #814f04;
+    background-color: var(--secciones);
     border-radius: 4px;
 }
 
@@ -93,17 +134,36 @@ section {
 }
 
 #player-title {
-    color: white;
+    color: rgb(2, 2, 2);
     font-weight: bold;
     font-size: 30px;
-    margin-top: -50%;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252), 0 0 15px rgb(255, 255, 255);
 }
 
 .audio-controls button {
     background: none;
     border: none;
     padding: 0;
+    margin-top: -10%;
 }
+
+#song-info {
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 650px;
+  }
+  
+  #song-title {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 27px;
+    width: 100%;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252), 0 0 15px rgb(255, 255, 255);
+  }
 
 /* .audio-controls #previousButton,
 .audio-controls #playButton,

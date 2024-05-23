@@ -133,3 +133,43 @@ buttons.forEach(button => {
     }, 3000);
   });
 });
+
+// EVENTO DE CLICK PARA CAMBIAR DE COLOR EL NOMBRE DE LAS SECCIONES //
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-list li a');
+
+  function changeActiveLink() {
+      let index = sections.length;
+
+      while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+      
+      navLinks.forEach((link) => link.classList.remove('active'));
+      navLinks[index].classList.add('active');
+  }
+
+  function scrollToSection(event) {
+      event.preventDefault();
+      const targetId = event.currentTarget.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+      });
+
+      // Update the active link immediately on click
+      navLinks.forEach((link) => link.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+  }
+
+  navLinks.forEach((link) => {
+      link.addEventListener('click', scrollToSection);
+  });
+
+  changeActiveLink();
+  window.addEventListener('scroll', changeActiveLink);
+});
