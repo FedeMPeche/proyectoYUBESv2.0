@@ -5,24 +5,24 @@
 // ---------------- AUDIO PLAYER -------------------------------------
 
 const audioFiles = [
-  '/audio/Bailando.mp3',
-  './audio/ElEspectador.mp3',
-  '../audio/Robotizado.mp3',
-  '../audio/NoParesdeBrillar.mp3',
-  '../audio/LLevame.mp3',
-  '../audio/PechoFrio.mp3',
-  '../audio/Sueños.mp3',
-  '../audio/EnelFondodelBar.mp3',
-  '../audio/Meditare.mp3',
-  '../audio/DeReojo.mp3',
-  '../audio/Toxicar.mp3',
-  '../audio/LaMaquinadelTiempo.mp3',
-  '../audio/Loveland.mp3',
-  '../audio/VendedordeIlusiones.mp3',
-  '../audio/Rutero.mp3',
-  '../audio/Portuguesa.mp3',
-  '../audio/Naufragio.mp3',
-  '../audio/EsTarde.mp3',
+  'audio/Bailando.mp3',
+  'audio/ElEspectador.mp3',
+  'audio/Robotizado.mp3',
+  'audio/NoParesdeBrillar.mp3',
+  'audio/LLevame.mp3',
+  'audio/PechoFrio.mp3',
+  'audio/Sueños.mp3',
+  'audio/EnelFondodelBar.mp3',
+  'audio/Meditare.mp3',
+  'audio/DeReojo.mp3',
+  'audio/Toxicar.mp3',
+  'audio/LaMaquinadelTiempo.mp3',
+  'audio/Loveland.mp3',
+  'audio/VendedordeIlusiones.mp3',
+  'audio/Rutero.mp3',
+  'audio/Portuguesa.mp3',
+  'audio/Naufragio.mp3',
+  'audio/EsTarde.mp3',
 ];
 
 let audio;
@@ -48,11 +48,11 @@ playPauseButton.addEventListener("click", function() {
       audio.addEventListener('ended', playNextSong);
     }
     audio.play();
-    playPauseIcon.src = "../img/pause.png";
+    playPauseIcon.src = "img/pause.png";
     isPaused = false;
   } else {
     audio.pause();
-    playPauseIcon.src = "../img/play.png";
+    playPauseIcon.src = "img/play.png";
     isPaused = true;
   }
 });
@@ -118,7 +118,7 @@ function playSong() {
   songTitle.textContent = songTitles[currentSongIndex];
   songInfo.style.opacity = 1;
   audio.play();
-  playPauseIcon.src = "../img/pause.png";
+  playPauseIcon.src = "img/pause.png";
   isPaused = false;
 }
 
