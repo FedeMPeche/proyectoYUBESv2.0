@@ -5,8 +5,8 @@
 // ---------------- AUDIO PLAYER -------------------------------------
 
 const audioFiles = [
-  '../audio/Bailando.mp3',
-  '../audio/ElEspectador.mp3',
+  '/audio/Bailando.mp3',
+  './audio/ElEspectador.mp3',
   '../audio/Robotizado.mp3',
   '../audio/NoParesdeBrillar.mp3',
   '../audio/LLevame.mp3',
