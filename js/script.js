@@ -63,6 +63,7 @@ previousButton.addEventListener("click", function() {
   } else {
     currentSongIndex = audioFiles.length - 1;
   }
+  updateSongInfo();
   playSong();
 });
 
@@ -72,6 +73,7 @@ nextButton.addEventListener("click", function() {
   } else {
     currentSongIndex = 0;
   }
+  updateSongInfo();
   playSong();
 });
 
@@ -108,6 +110,12 @@ const songTitles = [
   '[DESTINO B] 10- Es tarde',
 ];
 
+function updateSongInfo() {
+  playerTitle.style.display = 'none';
+  songTitle.textContent = songTitles[currentSongIndex];
+  songInfo.style.opacity = 1;
+}
+
 function playSong() {
   if (audio) {
     audio.pause();
@@ -115,8 +123,7 @@ function playSong() {
     audioPosition = 0;
   }
   audio = createAudioElements();
-  songTitle.textContent = songTitles[currentSongIndex];
-  songInfo.style.opacity = 1;
+  updateSongInfo();
   audio.play();
   playPauseIcon.src = "img/pause.png";
   isPaused = false;
@@ -131,6 +138,7 @@ buttons.forEach(button => {
     }, 3000);
   });
 });
+
 
 // EVENTO DE CLICK PARA CAMBIAR DE COLOR EL NOMBRE DE LAS SECCIONES //
 
