@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-/* PÁGINA 1 */
+/* ESTILOS PARA LAS DISTINTAS SECCIONES */
 
 section {
     padding-top: 75px;
@@ -22,6 +22,21 @@ section {
     flex-direction: column;
 }
 
+/*ESTILOS PARA PÁGINA 1 */
+
+.inicio {
+    background-image: url('../img/background-1.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 75px;
+}
+
+/*ESTILOS PARA NAVBAR Y CONTENIDO DE LA MISMA */
 
 .navbar {
     width: 100%;
@@ -124,17 +139,40 @@ li#redes {
     color: var(--secciones);
 }
 
-.inicio {
-    background-image: url('../img/background-1.webp');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 75px;
+/* ESTILOS PARA MARQUESINA */
+
+.marquesina-contenedor {
+    position: fixed;
+    top: 75px; 
+    right: 0;
+    width: 350px; 
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
 }
+  
+.marquesina {
+    display: inline-block;
+    padding: 10px 0;
+    animation: marquee 10s linear infinite;
+}
+  
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+  
+.marquesina p {
+    display: inline;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 16px;
+    color: white;
+}
+
+/* ESTILOS PARA REPRODUCTOR DE MÚSICA */
 
 #player-title {
     color: rgb(2, 2, 2);
