@@ -3,7 +3,7 @@ html {
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
 }
 
@@ -24,8 +24,8 @@ section {
 
 /*ESTILOS PARA PÁGINA 1 */
 
-.inicio {
-    background-image: url('../img/background-1.webp');
+#inicio {
+    background-image: url("../img/FondoDeInicio-FIGMA.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -37,7 +37,6 @@ section {
 }
 
 /*ESTILOS PARA NAVBAR Y CONTENIDO DE LA MISMA */
-
 .navbar {
     width: 100%;
     height: 75px;
@@ -52,6 +51,7 @@ section {
     padding: 0 20px;
 }
 
+/*LOGO*/
 .logo-contenedor {
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@ section {
 }
 
 .logo {
-    height: 75px; 
+    height: 75px;
     margin-right: 20px;
     margin-left: 100px;
 }
@@ -70,6 +70,7 @@ section {
     font-weight: bold;
 }
 
+/*NAVEGACIÓN*/
 .nav-list {
     list-style: none;
     margin: 0;
@@ -86,12 +87,21 @@ section {
     margin: 0 15px;
 }
 
-li#redes {
-    margin: 0 15px;
-    margin-left: 15%;
+/*REDES*/
+
+#redes {
+    margin: 0 96px;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    font-weight: bold;
+    width: 350px;
+    background-color: #047a04;
+    list-style: none;
 }
 
-.navbar .nav-list li a.fa {
+.fa {
     font-size: 24px;
     position: relative;
     border-radius: 20%;
@@ -105,19 +115,19 @@ li#redes {
     --spotify: #047a04;
 }
 
-.nav-list a#instagram:hover {
+#instagram:hover {
     background-color: var(--instagram);
 }
 
-.nav-list a#spotify:hover {
+#spotify:hover {
     background-color: var(--spotify);
 }
 
-.nav-list a#youtube:hover {
+#youtube:hover {
     background-color: var(--youtube);
 }
 
-.nav-list a#facebook:hover {
+#facebook:hover {
     background-color: var(--facebook);
 }
 
@@ -143,27 +153,31 @@ li#redes {
 
 .marquesina-contenedor {
     position: fixed;
-    top: 75px; 
+    top: 75px;
     right: 0;
-    width: 350px; 
+    width: 350px;
     overflow: hidden;
     white-space: nowrap;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
-  
+
 .marquesina {
     display: inline-block;
     padding: 10px 0;
     animation: marquee 10s linear infinite;
 }
-  
+
 @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
-  
+
 .marquesina p {
     display: inline;
     margin: 0;
@@ -178,7 +192,8 @@ li#redes {
     color: rgb(2, 2, 2);
     font-weight: bold;
     font-size: 30px;
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252), 0 0 15px rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252),
+        0 0 15px rgb(255, 255, 255);
 }
 
 .audio-controls button {
@@ -196,15 +211,16 @@ li#redes {
     overflow: hidden;
     white-space: nowrap;
     width: 650px;
-  }
-  
-  #song-title {
+}
+
+#song-title {
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 27px;
     width: 100%;
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252), 0 0 15px rgb(255, 255, 255);
-  }
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252),
+        0 0 15px rgb(255, 255, 255);
+}
 
 /* .audio-controls #previousButton,
 .audio-controls #playButton,
@@ -213,7 +229,6 @@ li#redes {
     width: 96px;
     height: 96px;
 } */
-
 
 #shows {
     background-color: #f9f9f9;

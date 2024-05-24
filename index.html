@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
-    <!-- PÁGINA 1 'INICIO'-->
-    <div class="inicio">
-        <nav class="navbar">
+    <header>
+        <nav class="navbar"> <!-- BARRA DE NAVEGACIÓN -->
 
             <div class="logo-contenedor">
                 <img src="img/logo.webp" alt="Logo de la banda" class="logo">
@@ -25,68 +26,104 @@
                 <li><a href="#discografia">DISCOGRAFÍA</a></li>
                 <li><a href="#galeria">GALERÍA</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
-                <li id="redes"><a href="https://open.spotify.com/intl-es/artist/2OqJjWVsq21Gwfm8qjJd7u" class="fa fa-spotify" id="spotify" target="_blank"></a></li>
-                <li><a href="https://www.youtube.com/@yubesrock" class="fa fa-youtube" id="youtube" target="_blank"></a></li>
-                <li><a href="https://www.instagram.com/yubesrock/" class="fa fa-instagram" id="instagram" target="_blank"></a></li>
-                <li><a href="https://www.facebook.com/YUBESRock" class="fa fa-facebook" id="facebook" target="_blank"></a></li>
+            </ul>
+
+            <ul id="redes">
+                <li>
+                    <a href="https://open.spotify.com/intl-es/artist/2OqJjWVsq21Gwfm8qjJd7u" class="fa fa-spotify"
+                        id="spotify" target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/@yubesrock" class="fa fa-youtube" id="youtube" target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/yubesrock/" class="fa fa-instagram" id="instagram"
+                        target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/YUBESRock" class="fa fa-facebook" id="facebook"
+                        target="_blank"></a>
+                </li>
             </ul>
         </nav>
-          
-          <div class="marquesina-contenedor">
-            <div class="marquesina">
-              <p>¡Seguinos en nuestras redes y enterate de todo!</p>
+    </header>
+
+    <main>
+        <section id="inicio"> <!-- PÁGINA 1 'INICIO'-->
+
+            <div class="marquesina-contenedor">
+                <div class="marquesina">
+                    <p>¡Seguinos en nuestras redes y enterate de todo!</p>
+                </div>
             </div>
-          </div>
-          
 
             <div class="contenido">
                 <section id="inicio">
-                    <h1 class= "animated reproductor" id="player-title">¡Dale play y disfrutá de Yubes!   
+                    <h1 class="animated reproductor" id="player-title">¡Dale play y disfrutá de Yubes!
                     </h1>
-                        <div id="song-info">
+                    <div id="song-info">
                         <p id="song-title">
                         </p>
-                        </div>
-                            <div class="audio-controls">
-                                <button id="previousButton">
-                                <img src="img/play-anterior.png" alt="Cancion Previa">
-                                </button>
-                                <button id="playPauseButton">
-                                    <img id="playPauseIcon" src="img/play.png" alt="Reproducir">
-                                </button>
-                                <button id="nextButton">
-                                <img src="img/play-siguiente.png" alt="Siguiente Cancion">
-                                </button>
-                            </div>
+                    </div>
+                    <div class="audio-controls">
+                        <button id="previousButton">
+                            <img src="img/play-anterior.png" alt="Cancion Previa">
+                        </button>
+                        <button id="playPauseButton">
+                            <img id="playPauseIcon" src="img/play.png" alt="Reproducir">
+                        </button>
+                        <button id="nextButton">
+                            <img src="img/play-siguiente.png" alt="Siguiente Cancion">
+                        </button>
+                    </div>
                 </section>
             </div>
-        </div>
-    </div>
-    
-    
+        </section>
 
-    <!-- PÁGINA 2 'SHOWS'--> 
+        <!-- PÁGINA 2 'SHOWS'-->
         <section id="shows">
             <h1>Shows</h1>
-            <p>Contenido de shows...</p></section>
-        <!-- PÁGINA 3 'BANDA'--> 
+            <p>Contenido de shows...</p>
+        </section>
+
+        <!-- PÁGINA 3 'BANDA'-->
         <section id="banda">
             <h1>Banda</h1>
-            <p>Contenido de banda...</p></section>
-        <!-- PÁGINA 4 'DISCOGRAFIA'--> 
+            <p>Contenido de banda...</p>
+        </section>
+
+        <!-- PÁGINA 4 'DISCOGRAFIA'-->
         <section id="discografia">
             <h1>Discográfica</h1>
-            <p>Contenido de discográfica...</p></section>
-        <!-- PÁGINA 5 'GALERIA'--> 
+            <p>Contenido de discográfica...</p>
+        </section>
+
+        <!-- PÁGINA 5 'GALERIA'-->
         <section id="galeria">
             <h1>Galería</h1>
-            <p>Contenido de galería...</p></section>
-        <!-- PÁGINA 6 'CONTACTO'--> 
+            <p>Contenido de galería...</p>
+        </section>
+
+        <!-- PÁGINA 6 'CONTACTO'-->
         <section id="contacto">
             <h1>Contacto</h1>
-            <p>Contenido de contacto...</p></section>
-    </div>
-    
+            <p>Contenido de contacto...</p>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+    <footer></footer>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -38,7 +38,7 @@ const playPauseIcon = document.getElementById('playPauseIcon');
 const previousButton = document.getElementById('previousButton');
 const nextButton = document.getElementById('nextButton');
 
-playPauseButton.addEventListener("click", function() {
+playPauseButton.addEventListener("click", function () {
   if (isPaused) {
     if (!audio) {
       playerTitle.style.display = 'none';
@@ -57,7 +57,7 @@ playPauseButton.addEventListener("click", function() {
   }
 });
 
-previousButton.addEventListener("click", function() {
+previousButton.addEventListener("click", function () {
   if (currentSongIndex > 0) {
     currentSongIndex--;
   } else {
@@ -67,7 +67,7 @@ previousButton.addEventListener("click", function() {
   playSong();
 });
 
-nextButton.addEventListener("click", function() {
+nextButton.addEventListener("click", function () {
   if (currentSongIndex < audioFiles.length - 1) {
     currentSongIndex++;
   } else {
@@ -142,39 +142,39 @@ buttons.forEach(button => {
 
 // EVENTO DE CLICK PARA CAMBIAR DE COLOR EL NOMBRE DE LAS SECCIONES //
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-list li a');
   const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
   function changeActiveLink() {
-      let index = sections.length;
+    let index = sections.length;
 
-      while (--index && window.scrollY + navbarHeight + 1 < sections[index].offsetTop) {}
+    while (--index && window.scrollY + navbarHeight + 1 < sections[index].offsetTop) { }
 
-      navLinks.forEach((link) => link.classList.remove('active'));
-      if (index >= 0) {
-          navLinks[index].classList.add('active');
-      }
+    navLinks.forEach((link) => link.classList.remove('active'));
+    if (index >= 0) {
+      navLinks[index].classList.add('active');
+    }
   }
 
   function scrollToSection(event) {
-      event.preventDefault();
-      const targetId = event.currentTarget.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
 
-      window.scrollTo({
-          top: targetSection.offsetTop - navbarHeight,
-          behavior: 'smooth'
-      });
+    window.scrollTo({
+      top: targetSection.offsetTop - navbarHeight,
+      behavior: 'smooth'
+    });
 
-      // Update the active link immediately on click
-      navLinks.forEach((link) => link.classList.remove('active'));
-      event.currentTarget.classList.add('active');
+    // Update the active link immediately on click
+    navLinks.forEach((link) => link.classList.remove('active'));
+    event.currentTarget.classList.add('active');
   }
 
   navLinks.forEach((link) => {
-      link.addEventListener('click', scrollToSection);
+    link.addEventListener('click', scrollToSection);
   });
 
   changeActiveLink();
