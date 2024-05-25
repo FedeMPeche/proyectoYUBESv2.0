@@ -49,18 +49,18 @@ section {
 .logo-contenedor {
     display: flex;
     align-items: center;
-    left: 50%;
+    margin: 0 0 0 96px;
+    transition: 0.5s;
 }
 
 .logo {
-    height: 75px;
-    margin-right: 20px;
-    margin-left: 100px;
+    height: 64px;
+    margin-right: 24px;
 }
 
 .nombreBanda {
     color: white;
-    font-size: 50px;
+    font-size: 48px;
     font-weight: bold;
 }
 
@@ -72,24 +72,21 @@ section {
     justify-content: center;
     font-weight: bold;
 }
-
 .nav-list li {
     margin: 0 24px;
 }
-
 .nav-list a {
     display: block;
     text-decoration: none;
     color: white;
     font-size: 20px;
     text-align: center;
+    transition: 0.5s;
 }
-
 .nav-list a:hover {
-    background-color: var(--secciones);
-    border-radius: 4px;
+    color: var(--secciones);
+    transform: scale(1.1);
 }
-
 .nav-list li a.active {
     color: var(--secciones);
 }
@@ -97,12 +94,13 @@ section {
 /*REDES*/
 
 #redes {
-    margin: 0 96px;
+    margin: 0 96px 0 0;
     padding: 0;
     display: flex;
     justify-content: center;
     font-weight: bold;
     list-style: none;
+    transition: 0.5s;
 }
 
 #redes li {
@@ -140,13 +138,12 @@ section {
 
 .marquesina-contenedor {
     position: fixed;
-    top: 75px;
+    top: 80px;
     right: 0;
-    width: 350px;
+    width: 280px;
     overflow: hidden;
     white-space: nowrap;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
@@ -235,4 +232,21 @@ section {
 
 #contacto {
     background-color: #b9b9b9;
+}
+
+@media screen and (max-width: 1366px) {
+    .nav-list li a {
+        font-size: 16px;
+        transition: 0.5s;
+    }
+
+    .logo-contenedor {
+        margin: 0 0 0 48px;
+        transition: 0.5s;
+    }
+
+    #redes {
+        margin: 0 48px 0 0;
+        transition: 0.5s;
+    }
 }
