@@ -18,7 +18,8 @@ body {
 
 /* ESTILOS PARA LAS DISTINTAS SECCIONES */
 section {
-    height: 100vh;
+    height: 93vh;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +35,19 @@ h2 {
     font-size: 32px;
     cursor: default;
 }
-
+h3 {
+    font-size: 24px;
+    cursor: default;
+}
+h4 {
+    font-size: 20px;
+    cursor: default;
+}
+p {
+    font-size: 20px;
+    cursor: default;
+    font-weight: 400;
+}
 /*Colores*/
 :root {
     --color: #a07b1b;
@@ -46,6 +59,7 @@ h2 {
     height: 80px;
     background-color: #000000;
     position: fixed;
+    top: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -158,12 +172,12 @@ h2 {
     color: white;
 }
 
-/*ESTILOS PARA PÁGINA 1 */
-
+/*INICIO*/
 #inicio {
     background-image: url("../img/FondoDeInicio-FIGMA.png");
     background-size: cover;
     background-position: top;
+    height: 100vh;
 }
 
 /* ESTILOS PARA REPRODUCTOR DE MÚSICA */
@@ -234,13 +248,98 @@ h2 {
 
 /*DISCOGRAFIA*/
 #discografia {
-    background: rgb(255, 34, 108);
+    /*background: rgb(255, 34, 108);
     background: radial-gradient(
         circle,
         rgba(255, 34, 108, 1) 33%,
         rgba(245, 29, 237, 1) 100%
+    );*/
+    background: radial-gradient(
+        circle,
+        rgba(243, 10, 10, 0.75) 0%,
+        rgba(255, 34, 108, 1) 33%,
+        rgba(245, 29, 237, 1) 66%
     );
+    display: flex;
+    gap: 64px;
 }
+.discos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+.disco {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*IMAGENES DISCOGRAFIA */
+.imagen {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#imagen2 {
+    margin-left: 15%;
+}
+
+/* MENU DESPLEGABLE DISCOGRAFIA */
+.menu {
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 300px;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu1 {
+    left: -324px;
+}
+#menu2 {
+    right: -324px;
+}
+.pMenu {
+    line-height: 1.6;
+}
+.disco:hover .imagen {
+    transform: scale(1.1);
+    box-shadow: 0 4px 32px 0px rgba(0, 0, 0, 0.5);
+}
+.disco:hover .menu {
+    display: flex;
+    right: 0;
+}
+.disco:not(:hover) .menu {
+    right: -300px;
+}
+
+/* REDES SECCION DISCOGRAFIA */
+#redes-discografia {
+    display: flex;
+    gap: 24px;
+}
+.social-logo-discografia {
+    height: 64px;
+    transition: 0.5s;
+}
+/*.social-logo-discografia:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+Acá, el hover está de más. Ya lo aplicamos a los álbum y
+a veces no es bueno sobrecargar el documento con la misma
+animación.
+*/
 
 /*GALERÍA*/
 #galeria {
@@ -295,141 +394,4 @@ h2 {
         margin: 0 48px 0 0;
         transition: 0.5s;
     }
-}
-
-
-/* CONTENIDO PARA DISCOGRAFIA */
-
-#discografia {
-    background-size: cover;
-    background-position: top;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 30px;
-    background: radial-gradient(
-        circle,
-        rgba(243, 10, 10, 0.75) 0%,
-        rgba(248, 10, 82, 0.75) 29%,
-        rgba(247, 6, 235, 1) 68%
-      );;
-}
-
-.discos {
-    margin-top: 2%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 5%;
-}
-  
-.disco {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 20px;
-    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.3);
-}
-  
-  #disco1, #disco2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-/*IMAGENES DISCOGRAFIA */
-  
-.imagen {
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-  
-#imagen2 {
-    margin-left: 15%;
-}
-  
-/* MENU DESPLEGABLE DISCOGRAFIA */
-
-.menu {
-    position: absolute;
-    top: 0;
-    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    width: 300px;
-    height: 120%;
-    background: radial-gradient(
-      circle,
-      rgba(242, 129, 30, 0.3) 0%,
-      rgba(236, 120, 12, 0.3) 29%,
-      rgba(240, 8, 114, 0.3) 68%
-    );
-    color: white;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s;
-    z-index: 1;
-}
-  
-#menu1 {
-    left: -325px;
-}
-  
-#menu2 {
-    right: -325px;
-}
-  
-.pMenu {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-}
-  
-.disco:hover .imagen {
-    transform: scale(1.1);
-    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.5);
-}
-  
-.disco:hover .menu {
-    display: flex;
-    right: 0;
-}
-  
-.disco:not(:hover) .menu {
-    right: -300px;
-}
-
-/* REDES SECCION DISCOGRAFIA */
-
-#redes-discografia {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; 
-    list-style: none;
-}
-
-#redes-discografia li {
-    margin: 0 18px;
-    display: flex;
-    align-items: center;
-}
-
-.social-logo-discografia {
-    height: 44px;
-    transition: 0.5s;
-}
-
-.social-logo-discografia:hover {
-    color: var(--secciones);
-    transform: scale(1.5);
-    transition: 0.5s;
 }
