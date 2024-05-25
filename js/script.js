@@ -48,11 +48,11 @@ playPauseButton.addEventListener("click", function () {
       audio.addEventListener('ended', playNextSong);
     }
     audio.play();
-    playPauseIcon.src = "img/pause.png";
+    playPauseIcon.src = "img/pause.svg";
     isPaused = false;
   } else {
     audio.pause();
-    playPauseIcon.src = "img/play.png";
+    playPauseIcon.src = "img/play_circle.svg";
     isPaused = true;
   }
 });
@@ -90,24 +90,24 @@ function playNextSong() {
 }
 
 const songTitles = [
-  '[DESTINO A] 01- Bailando entre las nubes',
-  '[DESTINO A] 02- El espectador',
-  '[DESTINO A] 03- Robotizado',
-  '[DESTINO A] 04- No pares de brillar',
-  '[DESTINO A] 05- Llevame',
-  '[DESTINO A] 06- Pecho frio',
-  '[DESTINO A] 07- Sueños',
-  '[DESTINO A] 08- En el fondo del bar',
-  '[DESTINO B] 01- Meditare',
-  '[DESTINO B] 02- De reojo',
-  '[DESTINO B] 03- Toxicar',
-  '[DESTINO B] 04- La maquina del tiempo',
-  '[DESTINO B] 05- Loveland',
-  '[DESTINO B] 06- Vendedor de ilusiones',
-  '[DESTINO B] 07- Rutero',
-  '[DESTINO B] 08- Portuguesa',
-  '[DESTINO B] 09- Naufragio',
-  '[DESTINO B] 10- Es tarde',
+  '[DESTINO A] 01 - Bailando entre las nubes',
+  '[DESTINO A] 02 - El espectador',
+  '[DESTINO A] 03 - Robotizado',
+  '[DESTINO A] 04 - No pares de brillar',
+  '[DESTINO A] 05 - Llevame',
+  '[DESTINO A] 06 - Pecho frio',
+  '[DESTINO A] 07 - Sueños',
+  '[DESTINO A] 08 - En el fondo del bar',
+  '[DESTINO B] 01 - Meditare',
+  '[DESTINO B] 02 - De reojo',
+  '[DESTINO B] 03 - Toxicar',
+  '[DESTINO B] 04 - La maquina del tiempo',
+  '[DESTINO B] 05 - Loveland',
+  '[DESTINO B] 06 - Vendedor de ilusiones',
+  '[DESTINO B] 07 - Rutero',
+  '[DESTINO B] 08 - Portuguesa',
+  '[DESTINO B] 09 - Naufragio',
+  '[DESTINO B] 10 - Es tarde',
 ];
 
 function updateSongInfo() {
@@ -125,7 +125,7 @@ function playSong() {
   audio = createAudioElements();
   updateSongInfo();
   audio.play();
-  playPauseIcon.src = "img/pause.png";
+  playPauseIcon.src = "img/pause.svg";
   isPaused = false;
 }
 

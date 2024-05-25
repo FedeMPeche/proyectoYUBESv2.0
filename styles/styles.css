@@ -10,7 +10,7 @@
 
 body {
     font-family: "Roboto Condensed", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     scroll-behavior: smooth;
 }
 
@@ -31,6 +31,9 @@ section {
     background-image: url("../img/FondoDeInicio-FIGMA.png");
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*ESTILOS PARA NAVBAR Y CONTENIDO DE LA MISMA */
@@ -138,19 +141,19 @@ section {
 
 .marquesina-contenedor {
     position: fixed;
+    margin: 0 108px 0 0;
     top: 80px;
     right: 0;
-    width: 280px;
+    width: 168px;
     overflow: hidden;
     white-space: nowrap;
     z-index: 1000;
     color: white;
 }
-
 .marquesina {
     display: inline-block;
-    padding: 10px 0;
-    animation: marquee 10s linear infinite;
+    padding: 12px 0;
+    animation: marquee 8s linear infinite;
 }
 
 @keyframes marquee {
@@ -164,27 +167,18 @@ section {
 
 .marquesina p {
     display: inline;
-    margin: 0;
-    padding: 0 20px;
     font-size: 16px;
     color: white;
 }
 
 /* ESTILOS PARA REPRODUCTOR DE MÚSICA */
 
-#player-title {
-    color: rgb(2, 2, 2);
-    font-weight: bold;
-    font-size: 30px;
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252),
-        0 0 15px rgb(255, 255, 255);
+.contenido {
 }
 
-.audio-controls button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: -10%;
+#player-title {
+    color: #ffffff;
+    font-size: 32px;
 }
 
 #song-info {
@@ -194,16 +188,27 @@ section {
     transition: opacity 1s ease-in-out;
     overflow: hidden;
     white-space: nowrap;
-    width: 650px;
+    display: flex;
+    justify-content: center;
 }
 
 #song-title {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 27px;
-    width: 100%;
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(252, 252, 252),
-        0 0 15px rgb(255, 255, 255);
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.audio-controls button {
+    background: none;
+    border: none;
+    margin: 0 12px;
 }
 
 /* .audio-controls #previousButton,
