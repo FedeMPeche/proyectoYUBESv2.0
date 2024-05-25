@@ -261,3 +261,141 @@ section {
         transition: 0.5s;
     }
 }
+
+
+/* CONTENIDO PARA DISCOGRAFIA */
+
+#discografia {
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    background: radial-gradient(
+        circle,
+        rgba(243, 10, 10, 0.75) 0%,
+        rgba(248, 10, 82, 0.75) 29%,
+        rgba(247, 6, 235, 1) 68%
+      );;
+}
+
+.discos {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+  
+.disco {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 20px;
+}
+  
+  #disco1, #disco2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/*IMAGENES DISCOGRAFIA */
+  
+.imagen {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+#imagen2 {
+    margin-left: 15%;
+}
+  
+/* MENU DESPLEGABLE DISCOGRAFIA */
+
+.menu {
+    position: absolute;
+    top: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 120%;
+    background: radial-gradient(
+      circle,
+      rgba(242, 129, 30, 0.3) 0%,
+      rgba(236, 120, 12, 0.3) 29%,
+      rgba(240, 8, 114, 0.3) 68%
+    );
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s;
+    z-index: 1;
+}
+  
+#menu1 {
+    left: -325px;
+}
+  
+#menu2 {
+    right: -325px;
+}
+  
+.pMenu {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    text-shadow: 2px 2px 5px black;
+    line-height: 2;
+}
+  
+.disco:hover .imagen {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+  
+.disco:hover .menu {
+    display: flex;
+    right: 0;
+}
+  
+.disco:not(:hover) .menu {
+    right: -300px;
+}
+
+/* REDES SECCION DISCOGRAFIA */
+
+#redes-discografia {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    list-style: none;
+}
+
+#redes-discografia li {
+    margin: 0 18px;
+    display: flex;
+    align-items: center;
+}
+
+.social-logo-discografia {
+    height: 44px;
+    transition: 0.5s;
+}
+
+.social-logo-discografia:hover {
+    color: var(--secciones);
+    transform: scale(1.5);
+    transition: 0.5s;
+}
