@@ -13,6 +13,7 @@ body {
     font-weight: 700;
     scroll-behavior: smooth;
     letter-spacing: -0.5px;
+    color: white;
 }
 
 /* ESTILOS PARA LAS DISTINTAS SECCIONES */
@@ -26,7 +27,10 @@ section {
 
 /*Títulos*/
 h1 {
-    color: #ffffff;
+    font-size: 48px;
+    cursor: default;
+}
+h2 {
     font-size: 32px;
     cursor: default;
 }
@@ -121,7 +125,7 @@ h1 {
 
 .marquesina-contenedor {
     position: fixed;
-    margin: 0 108px 0 0;
+    margin: 0 96px 0 0;
     top: 80px;
     right: 0;
     width: 168px;
@@ -160,9 +164,6 @@ h1 {
     background-image: url("../img/FondoDeInicio-FIGMA.png");
     background-size: cover;
     background-position: top;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* ESTILOS PARA REPRODUCTOR DE MÚSICA */
@@ -224,20 +225,59 @@ h1 {
     color: var(--color);
 }
 
+/*BANDA*/
 #banda {
-    background-color: #e9e9e9;
+    background-image: url("../img/Banda.png");
+    background-size: cover;
+    background-position: top;
 }
 
-#discografica {
-    background-color: #d9d9d9;
+/*DISCOGRAFIA*/
+#discografia {
+    background: rgb(255, 34, 108);
+    background: radial-gradient(
+        circle,
+        rgba(255, 34, 108, 1) 33%,
+        rgba(245, 29, 237, 1) 100%
+    );
 }
 
+/*GALERÍA*/
 #galeria {
-    background-color: #c9c9c9;
+    background: rgb(26, 26, 26);
+    background: radial-gradient(
+        circle,
+        rgba(26, 26, 26, 1) 0%,
+        rgba(10, 10, 10, 1) 100%
+    );
 }
 
+/*CONTACTO*/
 #contacto {
-    background-color: #b9b9b9;
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/backgroundPage1Hp.webp");
+    background-size: cover;
+    background-position: center;
+}
+.right {
+    width: 100%;
+    height: 100%;
+    background: rgb(10, 10, 10);
+    background: linear-gradient(
+        0deg,
+        rgba(10, 10, 10, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding: 160px 0 0;
 }
 
 @media screen and (max-width: 1366px) {
