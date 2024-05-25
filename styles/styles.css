@@ -389,9 +389,7 @@ h2 {
 .pMenu {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-    line-height: 1;
-    text-shadow: 2px 2px 5px black;
-    line-height: 2;
+    line-height: 1.75;
 }
   
 .disco:hover .imagen {
