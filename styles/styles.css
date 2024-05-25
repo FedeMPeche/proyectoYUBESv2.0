@@ -331,7 +331,7 @@ h2 {
     width: 300px;
     height: 300px;
     margin: 0 20px;
-    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.3);
 }
   
   #disco1, #disco2 {
@@ -360,7 +360,7 @@ h2 {
 .menu {
     position: absolute;
     top: 0;
-    border: 1px solid black;
+    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     width: 300px;
     height: 120%;
