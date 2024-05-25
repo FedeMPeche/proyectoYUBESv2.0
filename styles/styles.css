@@ -82,7 +82,6 @@ section {
     transition: 0.5s;
 }
 .nav-list a:hover {
-    color: var(--secciones);
     transform: scale(1.1);
 }
 .nav-list li a.active {
