@@ -224,33 +224,49 @@ p {
 /*BANDA*/
 
 .biografia {
+    margin-top: 2%;
     width: 56%;
     display: flex;
     gap: 8px;
     line-height: 1.6;
 }
 
+.contenedorTarjetas {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 1.6;
+}
+
 .tarjetas {
-    height: 300px;
-    width: 240px;
+    height: 356px;
+    width: 284px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-  }
+}
 
-.contenedorTarjetas {
+.detalle {
+    position: absolute;
+    color: black;
     width: 100%;
-    display: flex;
-    justify-content: space space-evenly;
-    line-height: 1.6;
+    bottom: 0;
+    padding: 0;
+}
+
+.tituloTarjeta {
+    background-color: white;
+}
+
+.contenidoTarjeta {
+    background-color: var(--color);
 }
 
 .imagenTano {
     height: 100%;
     width: 100%;
     position: absolute;
-    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background: #ff000000;
     background-image: url("../img/tanoWebp.webp");
     background-size: cover;
 }
@@ -259,8 +275,6 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background: #ff000000;
     background-image: url("../img/marchoWebp.webp");
     background-size: cover;
 }
@@ -269,8 +283,6 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background: #ff000000;
     background-image: url("../img/fede2Webp.webp");
     background-size: cover;
 }
@@ -279,8 +291,6 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background: #ff000000;
     background-image: url("../img/pabloWebp.webp");
     background-size: cover;
 }
@@ -289,8 +299,6 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background: #ff000000;
     background-image: url("../img/mauriWebp.webp");
     background-size: cover;
 }
