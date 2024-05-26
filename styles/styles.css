@@ -221,7 +221,7 @@ p {
     color: var(--color);
 }
 
-/*BANDA*/
+/*SECCIÓN BANDA*/
 
 .biografia {
     margin-top: 2%;
@@ -230,6 +230,8 @@ p {
     gap: 8px;
     line-height: 1.6;
 }
+
+/*TARJETAS INTEGRANTES */
 
 .contenedorTarjetas {
     margin-top: 2%;
