@@ -204,6 +204,7 @@ p {
 } */
 
 /*SHOWS*/
+
 #shows {
     background: rgb(26, 26, 26);
     background: radial-gradient(
@@ -221,6 +222,79 @@ p {
 }
 
 /*BANDA*/
+
+.biografia {
+    width: 56%;
+    display: flex;
+    gap: 8px;
+    line-height: 1.6;
+}
+
+.tarjetas {
+    height: 300px;
+    width: 240px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+.contenedorTarjetas {
+    width: 100%;
+    display: flex;
+    justify-content: space space-evenly;
+    line-height: 1.6;
+}
+
+.imagenTano {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #ff000000;
+    background-image: url("../img/tanoWebp.webp");
+    background-size: cover;
+}
+
+.imagenMarcho {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #ff000000;
+    background-image: url("../img/marchoWebp.webp");
+    background-size: cover;
+}
+  
+.imagenFede {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #ff000000;
+    background-image: url("../img/fede2Webp.webp");
+    background-size: cover;
+}
+  
+.imagenPablo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #ff000000;
+    background-image: url("../img/pabloWebp.webp");
+    background-size: cover;
+}
+  
+.imagenMauri {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #ff000000;
+    background-image: url("../img/mauriWebp.webp");
+    background-size: cover;
+}
+
 #banda {
     background-image: url("../img/Banda.png");
     background-size: cover;
@@ -228,6 +302,7 @@ p {
 }
 
 /*DISCOGRAFIA*/
+
 #discografia {
     /*background: rgb(255, 34, 108);
     background: radial-gradient(
@@ -259,6 +334,7 @@ p {
 }
 
 /*IMAGENES DISCOGRAFIA */
+
 .imagen {
     background-size: cover;
     background-position: center center;
@@ -305,6 +381,7 @@ p {
 }
 
 /* REDES SECCION DISCOGRAFIA */
+
 #redes-discografia {
     display: flex;
     gap: 24px;
