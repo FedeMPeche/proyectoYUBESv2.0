@@ -221,6 +221,87 @@ p {
     color: var(--color);
 }
 
+.proximosShows {
+    width: 1145px;
+    height: 290px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 0 36px 0 36px;
+    margin-top: 2%;
+}
+
+.shows {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.fecha {
+    width: 180px;
+    height: 180px;
+    display: column;
+    align-items: center;
+    border-radius: 2px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+}
+
+.añoFecha {
+    font-size: 36px;
+    color: white;
+    background-color: var(--color);
+}
+
+.diaFecha {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.mesFecha {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+.detalleFecha {
+    height: 180px;
+    display: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 2;
+}
+
+.comprarEntradas {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.comprarEntradas a {
+    width: 204px;
+    height: 46px;
+    padding: 10px;
+    background-color: var(--color);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.comprarEntradas a:hover {
+    background-color: white;
+    color: black;
+}
+
 /*SECCIÓN BANDA*/
 
 .biografia {
