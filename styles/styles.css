@@ -167,6 +167,12 @@ p {
     color: white;
 }
 
+/*CONTENEDOR 'CONTENIDO' DE CADA SECCIÓN */
+.contenido {
+    
+}
+
+
 /*INICIO*/
 #inicio {
     background-image: url("../img/FondoDeInicio-FIGMA.png");
@@ -174,20 +180,24 @@ p {
     background-position: top;
     height: 100vh;
 }
+
 #song-info {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
 #song-title {
     font-size: 24px;
     font-weight: 700;
     cursor: default;
 }
+
 .audio-controls {
     display: flex;
     justify-content: center;
     margin-top: 24px;
 }
+
 .audio-controls button {
     background: none;
     border: none;
