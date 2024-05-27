@@ -217,6 +217,7 @@ p {
 .dosPalabras {
     display: flex;
     gap: 8px;
+    margin-bottom: 48px;
 }
 
 .tituloPintado {
