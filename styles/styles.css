@@ -213,10 +213,12 @@ p {
         rgba(10, 10, 10, 1) 100%
     );
 }
+
 .dosPalabras {
     display: flex;
     gap: 8px;
 }
+
 .tituloPintado {
     color: var(--color);
 }
@@ -261,16 +263,15 @@ p {
     background-color: var(--color);
 }
 
-.diaFecha {
-    font-size: 56px;
-    font-weight: bold;
-}
-
 .mesFecha {
     font-size: 36px;
     font-weight: bold;
 }
 
+.diaFecha {
+    font-size: 56px;
+    font-weight: bold;
+}
 
 .detalleFecha {
     height: 180px;
