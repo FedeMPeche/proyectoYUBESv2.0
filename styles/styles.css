@@ -307,7 +307,6 @@ p {
 /*SECCIÓN BANDA*/
 
 .biografia {
-    margin-top: 2%;
     width: 56%;
     display: flex;
     gap: 8px;
@@ -412,6 +411,7 @@ p {
     display: flex;
     gap: 64px;
 }
+
 .discos {
     display: flex;
     justify-content: space-around;
@@ -419,6 +419,7 @@ p {
     justify-content: center;
     gap: 48px;
 }
+
 .disco {
     position: relative;
     width: 300px;
@@ -435,6 +436,7 @@ p {
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 #imagen2 {
     margin-left: 15%;
 }
@@ -455,20 +457,25 @@ p {
 #menu1 {
     left: -324px;
 }
+
 #menu2 {
     right: -324px;
 }
+
 .pMenu {
     line-height: 1.6;
 }
+
 .disco:hover .imagen {
     transform: scale(1.1);
     box-shadow: 0 4px 32px 0px rgba(0, 0, 0, 0.5);
 }
+
 .disco:hover .menu {
     display: flex;
     right: 0;
 }
+
 .disco:not(:hover) .menu {
     right: -300px;
 }
@@ -479,6 +486,7 @@ p {
     display: flex;
     gap: 24px;
 }
+
 .social-logo-discografia {
     height: 64px;
     transition: 0.5s;
@@ -507,6 +515,7 @@ animación.
     display: flex;
     flex-direction: row;
 }
+
 .left {
     width: 100%;
     height: 100%;
@@ -514,6 +523,7 @@ animación.
     background-size: cover;
     background-position: center;
 }
+
 .right {
     width: 100%;
     height: 100%;
