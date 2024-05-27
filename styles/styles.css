@@ -270,6 +270,7 @@ p {
 }
 
 .diaFecha {
+    padding-top: 10px;
     font-size: 56px;
     font-weight: bold;
 }
