@@ -551,31 +551,22 @@ animación.
 
 .galeria-left {
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
 }
 
 .galeria-right {
     width: 100%;
-    height: 100%;
-    background: rgb(10, 10, 10);
-    background: linear-gradient(
-        180deg,
-        rgba(10, 10, 10, 1) 0%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: top;
-    padding: 80px 0 0;
 }
 
 .gallery {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
 }
 
 .card {
@@ -587,10 +578,6 @@ animación.
     transition: background-color 0.3s;
 }
 
-.card:hover {
-    background-color: #f0f0f0;
-}
-
 .content {
     display: none;
     flex-direction: column;
@@ -600,7 +587,8 @@ animación.
 }
 
 .photo-card {
-    border: 1px solid #ddd;
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 20px;
     width: 200px;
     text-align: center;
@@ -609,7 +597,7 @@ animación.
 }
 
 .photo-card:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color);
 }
 
 .photos-section{
@@ -623,11 +611,11 @@ animación.
     justify-content: center;
     gap: 10px;
     position: relative;
+    padding: 10px;
 }
 
 .carousel img{
     width: 416px;
-    height: 234px;
     height: auto;
     display: none;
 }
@@ -663,6 +651,16 @@ animación.
     background-color: var(--color);
 }
 
+.videos-container{
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+}
+
+#videos-card:hover{
+    background-color: var(--color);
+}
+
 .videos-section {
     display: none;
 }
@@ -673,7 +671,6 @@ animación.
 
 .videos-section video {
     width: 100%;
-    height: auto;
     max-width: 600px; /* Ajusta el ancho máximo según tu preferencia */
     max-height: 600px;
 }

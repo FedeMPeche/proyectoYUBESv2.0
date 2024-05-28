@@ -244,8 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function initCarousel(section) {
       const carousel = section.querySelector('.carousel');
       const images = carousel.querySelectorAll('img');
-      const prevButton = carousel.querySelector('.prev');
-      const nextButton = carousel.querySelector('.next');
+      const prevButton = carousel.querySelector('.prev-img');
+      const nextButton = carousel.querySelector('.next-img');
       let currentIndex = 0;
 
       function showImage(index) {
