@@ -150,11 +150,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function changeActiveLink() {
     let index = sections.length;
 
-    while (--index && window.scrollY + navbarHeight + 1 < sections[index].offsetTop) { }
+    while (--index && window.scrollY + navbarHeight + 1 < sections[index].offsetTop) {}
 
     navLinks.forEach((link) => link.classList.remove('active'));
-    if (index >= 0) {
+
+    // Asegurarse de que el índice está dentro del rango
+    if (index >= 0 && index < navLinks.length) {
       navLinks[index].classList.add('active');
+    } else {
+      console.warn('Índice fuera de rango:', index);
     }
   }
 
@@ -163,13 +167,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const targetId = event.currentTarget.getAttribute("href");
     const targetSection = document.querySelector(targetId);
 
-    window.scrollTo({
-      top: targetSection.offsetTop - navbarHeight,
-      behavior: 'smooth'
-    });
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - navbarHeight,
+        behavior: 'smooth'
+      });
 
-    navLinks.forEach((link) => link.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+      navLinks.forEach((link) => link.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    } else {
+      console.warn('No se encontró la sección:', targetId);
+    }
   }
 
   navLinks.forEach((link) => {
