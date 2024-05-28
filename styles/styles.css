@@ -44,6 +44,11 @@ h4 {
     font-size: 20px;
     cursor: default;
 }
+h5 {
+    font-size: 16px;
+    cursor: default;
+    font-weight: 400;
+}
 p {
     font-size: 20px;
     cursor: default;
@@ -169,9 +174,7 @@ p {
 
 /*CONTENEDOR 'CONTENIDO' DE CADA SECCIÓN */
 .contenido {
-    
 }
-
 
 /*INICIO*/
 #inicio {
@@ -220,90 +223,87 @@ p {
     background: radial-gradient(
         circle,
         rgba(26, 26, 26, 1) 0%,
-        rgba(10, 10, 10, 1) 100%
+        rgba(10, 10, 10, 1) 66%
     );
+}
+.showsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
 }
 
 .dosPalabras {
     display: flex;
     gap: 8px;
-    margin-bottom: 48px;
 }
-
 .tituloPintado {
     color: var(--color);
 }
 
 .proximosShows {
-    width: 1145px;
+    width: 960px;
     height: 290px;
-    border: 1px solid #000000;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    padding: 0 36px 0 36px;
-    margin-top: 2%;
-}
-
-.shows {
-    width: 100%;
-    height: 100%;
+    border-radius: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    background-color: black;
+    padding: 48px;
     box-sizing: border-box;
 }
-
+.show-info {
+    display: flex;
+    gap: 36px;
+}
 .fecha {
     width: 180px;
     height: 180px;
-    display: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    border-radius: 2px;
+    justify-content: space-between;
     background-color: white;
     color: black;
-    border-radius: 15px;
+    border-radius: 16px;
 }
-
 .añoFecha {
-    font-size: 36px;
     color: white;
+    width: 100%;
     background-color: var(--color);
+    padding: 4px 0;
+    border-radius: 16px 16px 0 0;
 }
-
-.mesFecha {
-    font-size: 36px;
-    font-weight: bold;
-}
-
 .diaFecha {
-    padding-top: 10px;
-    font-size: 56px;
+    padding: -24px;
+    font-size: 96px;
     font-weight: bold;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mesFecha {
+    padding: 0 0 4px;
+    font-weight: 900;
 }
 
 .detalleFecha {
-    height: 180px;
-    display: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    line-height: 2;
-}
-
-.comprarEntradas {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.detalleFecha h3 {
+    font-weight: 300;
 }
 
 .comprarEntradas a {
-    width: 224px;
-    height: 68px;
-    padding: 20px;
+    display: flex;
+    height: 80px;
+    padding: 24px;
     background-color: var(--color);
     color: white;
     border-radius: 15px;
@@ -315,30 +315,43 @@ p {
     color: black;
 }
 
-/*SECCIÓN BANDA*/
+/*BANDA*/
 
-.biografia {
+#banda {
+    background-image: url("../img/Banda.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 48px 0;
+}
+
+.banda-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.banda-content p {
     width: 56%;
     display: flex;
-    gap: 8px;
     line-height: 1.6;
+    text-align: start;
 }
 
 /*TARJETAS INTEGRANTES */
 
 .contenedorTarjetas {
-    margin-top: 2%;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
     line-height: 1.6;
 }
 
 .tarjetas {
-    height: 356px;
-    width: 284px;
+    height: 384px;
+    width: 20%;
     position: relative;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -352,10 +365,19 @@ p {
 
 .tituloTarjeta {
     background-color: white;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenidoTarjeta {
     background-color: var(--color);
+    color: white;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .imagenTano {
@@ -364,6 +386,7 @@ p {
     position: absolute;
     background-image: url("../img/tanoWebp.webp");
     background-size: cover;
+    background-position: center;
 }
 
 .imagenMarcho {
@@ -372,36 +395,34 @@ p {
     position: absolute;
     background-image: url("../img/marchoWebp.webp");
     background-size: cover;
+    background-position: center;
 }
-  
+
 .imagenFede {
     height: 100%;
     width: 100%;
     position: absolute;
     background-image: url("../img/fede2Webp.webp");
     background-size: cover;
+    background-position: top;
 }
-  
+
 .imagenPablo {
     height: 100%;
     width: 100%;
     position: absolute;
     background-image: url("../img/pabloWebp.webp");
     background-size: cover;
+    background-position: center;
 }
-  
+
 .imagenMauri {
     height: 100%;
     width: 100%;
     position: absolute;
     background-image: url("../img/mauriWebp.webp");
     background-size: cover;
-}
-
-#banda {
-    background-image: url("../img/Banda.png");
-    background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 /*DISCOGRAFIA*/
@@ -517,7 +538,7 @@ animación.
     background: radial-gradient(
         circle,
         rgba(26, 26, 26, 1) 0%,
-        rgba(10, 10, 10, 1) 100%
+        rgba(10, 10, 10, 1) 40%
     );
 }
 
@@ -530,7 +551,7 @@ animación.
 .left {
     width: 100%;
     height: 100%;
-    background-image: url("../img/backgroundPage1Hp.webp");
+    background-image: url("../img/footer.png");
     background-size: cover;
     background-position: center;
 }
@@ -540,7 +561,7 @@ animación.
     height: 100%;
     background: rgb(10, 10, 10);
     background: linear-gradient(
-        0deg,
+        180deg,
         rgba(10, 10, 10, 1) 0%,
         rgba(0, 0, 0, 1) 100%
     );
@@ -548,7 +569,50 @@ animación.
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding: 160px 0 0;
+    padding: 80px 0 0;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-direction: row;
+}
+footer h4 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+.footer-left {
+    margin-top: -240px;
+    width: 100%;
+    height: 240px;
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+    padding-bottom: 48px;
+}
+.footer-right {
+    margin-top: -240px;
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 48px;
+}
+.dev-container {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+}
+.dev {
+    width: 128px;
+}
+.dev img {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.75);
+}
+.dev h4 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+.dev h5 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (max-width: 1366px) {
