@@ -363,6 +363,11 @@ p {
     padding: 0;
 }
 
+.tarjetas:hover .detalle {
+    transform: translateY(100%);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 .tituloTarjeta {
     background-color: white;
     height: 48px;
