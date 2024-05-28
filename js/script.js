@@ -168,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth'
     });
 
-    // Update the active link immediately on click
     navLinks.forEach((link) => link.classList.remove('active'));
     event.currentTarget.classList.add('active');
   }
@@ -180,4 +179,151 @@ document.addEventListener('DOMContentLoaded', function () {
   changeActiveLink();
   window.addEventListener('scroll', changeActiveLink);
 });
+
+
+// INTERACCIONES EN GALERIA //
+
+document.addEventListener('DOMContentLoaded', () => {
+  const photosCard = document.getElementById('photos-card');
+  const photosContent = document.getElementById('photos-content');
+  const intimidadCard = document.getElementById('intimidad-card');
+  const produccionCard = document.getElementById('produccion-card');
+  const showsCard = document.getElementById('shows-card');
+  const intimidadContent = document.getElementById('intimidad-content');
+  const produccionContent = document.getElementById('produccion-content');
+  const showsContent = document.getElementById('shows-content');
+  const backButton = document.createElement('button');
+
+  const photoSections = [intimidadContent, produccionContent, showsContent];
+
+  backButton.className = 'button-back';
+  backButton.textContent = 'Volver';
+  backButton.addEventListener('click', () => {
+      hideAllPhotoSections();
+      photosContent.style.display = 'flex';
+      photosCard.querySelector('h2').textContent = 'Fotos';
+      backButton.style.display = 'none';
+  });
+  document.body.appendChild(backButton);
+  backButton.style.display = 'none';
+
+  photosCard.addEventListener('click', () => {
+      const isExpanded = photosContent.style.display === 'flex';
+      photosContent.style.display = isExpanded ? 'none' : 'flex';
+      photosCard.querySelector('h2').textContent = isExpanded ? 'Fotos' : 'Volver';
+      if (!isExpanded) {
+          hideAllPhotoSections();
+          backButton.style.display = 'none';
+      }
+  });
+
+  intimidadCard.addEventListener('click', () => {
+      showPhotoSection(intimidadContent);
+  });
+
+  produccionCard.addEventListener('click', () => {
+      showPhotoSection(produccionContent);
+  });
+
+  showsCard.addEventListener('click', () => {
+      showPhotoSection(showsContent);
+  });
+
+  function hideAllPhotoSections() {
+      photoSections.forEach(section => section.style.display = 'none');
+  }
+
+  function showPhotoSection(section) {
+      hideAllPhotoSections();
+      photosContent.style.display = 'none';
+      section.style.display = 'block';
+      backButton.style.display = 'block';
+      initCarousel(section);
+  }
+
+  function initCarousel(section) {
+      const carousel = section.querySelector('.carousel');
+      const images = carousel.querySelectorAll('img');
+      const prevButton = carousel.querySelector('.prev');
+      const nextButton = carousel.querySelector('.next');
+      let currentIndex = 0;
+
+      function showImage(index) {
+          images.forEach((img, i) => {
+              img.classList.toggle('active', i === index);
+          });
+      }
+
+      prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+          showImage(currentIndex);
+      });
+
+      nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+          showImage(currentIndex);
+      });
+
+      showImage(currentIndex); // Inicializar con la primera imagen
+  }
+});
+
+
+// INTERACCIONES DE LA SECCION GALERIA/VIDEOS //
+
+document.addEventListener("DOMContentLoaded", function() {
+  const videosCard = document.getElementById('videos-card');
+  const videosSections = document.querySelectorAll('.videos-section');
+  let currentVideoIndex = 0;
+  let videosVisible = false;
+
+  function showVideo(index) {
+      videosSections.forEach((section, i) => {
+          if (i === index) {
+              section.classList.add('active');
+          } else {
+              section.classList.remove('active');
+          }
+      });
+  }
+
+  function toggleVideosSection() {
+    const currentVideo = videosSections[currentVideoIndex].querySelector('video');
+    if (!videosVisible) {
+        videosSections[currentVideoIndex].classList.add('active');
+        videosCard.textContent = 'Volver';
+        videosVisible = true;
+    } else {
+        videosSections[currentVideoIndex].classList.remove('active');
+        videosCard.textContent = 'Videos';
+        videosVisible = false;
+        if (currentVideo) {
+            currentVideo.pause();
+        }
+    }
+}
+
+  videosCard.addEventListener('click', function() {
+      toggleVideosSection();
+  });
+
+  document.querySelectorAll('.prev').forEach(button => {
+      button.addEventListener('click', function() {
+          currentVideoIndex = (currentVideoIndex - 1 + videosSections.length) % videosSections.length;
+          showVideo(currentVideoIndex);
+      });
+  });
+
+  document.querySelectorAll('.next').forEach(button => {
+      button.addEventListener('click', function() {
+          currentVideoIndex = (currentVideoIndex + 1) % videosSections.length;
+          showVideo(currentVideoIndex);
+      });
+  });
+});
+
+
+
+
+
 

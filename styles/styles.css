@@ -539,12 +539,143 @@ animación.
 
 /*GALERÍA*/
 #galeria {
+    display: flex;
+    flex-direction: row;
     background: rgb(26, 26, 26);
     background: radial-gradient(
         circle,
         rgba(26, 26, 26, 1) 0%,
         rgba(10, 10, 10, 1) 40%
     );
+}
+
+.galeria-left {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.galeria-right {
+    width: 100%;
+    height: 100%;
+    background: rgb(10, 10, 10);
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding: 80px 0 0;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #f0f0f0;
+}
+
+.content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.photo-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.photo-card:hover {
+    background-color: #f0f0f0;
+}
+
+.photos-section{
+    display: none;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.carousel img{
+    width: 416px;
+    height: 234px;
+    height: auto;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel button:hover {
+    background-color: var(--color);
+}
+
+#photos-card.card {
+    height: 64px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#photos-card.card:hover {
+    background-color: var(--color);
+}
+
+.videos-section {
+    display: none;
+}
+
+.videos-section.active {
+    display: block;
+}
+
+.videos-section video {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Ajusta el ancho máximo según tu preferencia */
+    max-height: 600px;
 }
 
 /*CONTACTO*/
