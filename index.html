@@ -253,30 +253,45 @@
 
             </div>
             <div class="right">
-                <h1 class="tituloFormulario" id="titulo1Formulario">FORMULARIO DE CONTACTO</h1>
-                <div class="contact-form">
-                    <form id="formularioContacto" action="https://formsubmit.co/yubesrock@gmail.com" method="POST">
-                        <div class="form-group">
-                        <label for="nombre"><strong>NOMBRE:</strong></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="form-group">
-                        <label for="email"><strong>CORREO ELECTRONICO:</strong></label>
-                        <input type="email" id="email" name="email" placeholder="Tu correo electronico" required>
-                        </div>
-                        <div class="form-group">
-                        <label for="telefono"><strong>TELEFONO:</strong></label>
-                        <input type="text" id="telefono" name="telefono" placeholder="Tu telefono para contactarnos" required>
-                        </div>
-                        <div class="form-group">
-                        <label for="mensaje"><strong>MENSAJE:</strong></label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
-                        </div>
-                        <button type="submit" id="enviarBtn"><strong>ENVIAR MENSAJE</strong></button>
-                        <input type="hidden" name="_next" value="https://yubes.com.ar">             
-                        <input type="hidden" name="_subject" value="Nuevo correo desde YUBES!">
-                    </form>
-                </div>
+                <h1>CONTACTANOS</h1>
+                <form id="formularioContacto" method="POST">
+                    <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" id="enviarBtn"><h3>ENVIAR ➝</h3></button>
+                </form>
+                <h3>SEGUINOS EN:</h3>
+                <ul id="redes">
+                    <li>
+                        <a href="https://open.spotify.com/intl-es/artist/2OqJjWVsq21Gwfm8qjJd7u" target="_blank">
+                            <img class="social-logo contact" src="img/Spotify.svg" alt="spotify">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@yubesrock" target="_blank">
+                            <img class="social-logo contact" src="img/Youtube.svg" alt="youtube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/yubesrock/" target="_blank">
+                            <img class="social-logo contact" src="img/Instagram.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/YUBESRock" target="_blank">
+                            <img class="social-logo contact" src="img/Facebook.svg" alt="facebook">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

@@ -562,6 +562,80 @@ p {
     align-items: center;
     justify-content: top;
     padding: 80px 0 0;
+    gap: 48px;
+}
+
+/*FORMULARIO DE CONTACTO */
+
+#formularioContacto {
+    width: 596px;
+    height: 480px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    font-family: "Roboto Condensed", sans-serif;
+    width: 596px;
+    height: 48px;
+    padding: 0 10px; 
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+}
+
+.form-group textarea {
+    font-family: "Roboto Condensed", sans-serif;
+    width: 596px;
+    height: 192px;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+}
+
+/* Estilo para el botón de envío */
+
+#enviarBtn {
+    width: 596px;
+    height: 80px;
+    background-color: var(--color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#enviarBtn h3 {
+    cursor: pointer;
+}
+
+/* Efecto hover para el botón de envío */
+#enviarBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* REDES SOCIALES DE CONTACTO*/ 
+
+.social-logo.contact {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*FOOTER*/
