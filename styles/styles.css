@@ -637,7 +637,8 @@ p {
 }
 
 .social-logo.contact:hover {
-    filter: brightness(35%) saturate(75%) invert(27%) sepia(83%) saturate(550%) hue-rotate(4deg) brightness(100%) contrast(55%);
+    filter: brightness(35%) saturate(75%) invert(27%) sepia(83%) saturate(550%)
+        hue-rotate(4deg) brightness(100%) contrast(55%);
 }
 
 /*FOOTER*/
