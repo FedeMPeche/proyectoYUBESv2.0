@@ -561,8 +561,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding: 80px 0 0;
-    gap: 48px;
+    padding: 64px 0 0;
+    gap: 24px;
 }
 
 /*FORMULARIO DE CONTACTO */
@@ -570,8 +570,6 @@ p {
 #formularioContacto {
     width: 596px;
     height: 480px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 .form-group {
