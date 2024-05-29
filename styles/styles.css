@@ -637,7 +637,7 @@ p {
 }
 
 .social-logo.contact:hover {
-    color: var(--color);
+    filter: brightness(30%) saturate(75%) invert(27%) sepia(83%) saturate(550%) hue-rotate(4deg) brightness(100%) contrast(85%);
 }
 
 /*FOOTER*/
