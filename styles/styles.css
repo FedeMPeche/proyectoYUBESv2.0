@@ -581,7 +581,7 @@ p {
     font-family: "Roboto Condensed", sans-serif;
     width: 596px;
     height: 48px;
-    padding: 0 10px; 
+    padding: 0 10px;
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
@@ -602,6 +602,7 @@ p {
 /* Estilo para el botón de envío */
 
 #enviarBtn {
+    font-family: "Roboto Condensed", sans-serif;
     width: 596px;
     height: 80px;
     background-color: var(--color);
@@ -626,8 +627,13 @@ p {
     color: black;
 }
 
-/* REDES SOCIALES DE CONTACTO*/ 
+/* REDES SOCIALES DE CONTACTO*/
 
+#redes-contact {
+    display: flex;
+    gap: 24px;
+    transition: 0.5s;
+}
 .social-logo.contact {
     width: 50px;
     height: 50px;
