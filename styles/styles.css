@@ -782,19 +782,24 @@ footer h4 {
     /*FOOTER*/
     footer {
         display: flex;
+        gap: 24px;
         flex-direction: column;
+        background-color: black;
+        padding: 48px 0;
     }
     .footer-left {
-        margin-top: -240px;
+        height: auto;
+        margin-top: 0;
         display: flex;
         gap: 24px;
         justify-content: end;
-        padding-bottom: 48px;
+        padding-bottom: 0;
     }
     .footer-right {
-        margin-top: -240px;
+        height: auto;
+        margin-top: 0;
         display: flex;
         justify-content: end;
-        padding-bottom: 48px;
+        padding-bottom: 0;
     }
 }
