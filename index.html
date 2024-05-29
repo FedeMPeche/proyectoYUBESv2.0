@@ -253,7 +253,30 @@
 
             </div>
             <div class="right">
-                <h2>CONTACTO</h2>
+                <h1 class="tituloFormulario" id="titulo1Formulario">FORMULARIO DE CONTACTO</h1>
+                <div class="contact-form">
+                    <form id="formularioContacto" action="https://formsubmit.co/yubesrock@gmail.com" method="POST">
+                        <div class="form-group">
+                        <label for="nombre"><strong>NOMBRE:</strong></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="email"><strong>CORREO ELECTRONICO:</strong></label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electronico" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="telefono"><strong>TELEFONO:</strong></label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Tu telefono para contactarnos" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="mensaje"><strong>MENSAJE:</strong></label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" id="enviarBtn"><strong>ENVIAR MENSAJE</strong></button>
+                        <input type="hidden" name="_next" value="https://yubes.com.ar">             
+                        <input type="hidden" name="_subject" value="Nuevo correo desde YUBES!">
+                    </form>
+                </div>
             </div>
         </section>
     </main>
