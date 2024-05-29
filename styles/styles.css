@@ -64,6 +64,7 @@ p {
 .navbar {
     width: 100%;
     height: 80px;
+    padding: 0 96px;
     background-color: #000000;
     position: fixed;
     top: 0;
@@ -76,7 +77,6 @@ p {
 .logo-contenedor {
     display: flex;
     align-items: center;
-    margin: 0 0 0 96px;
     transition: 0.5s;
 }
 
@@ -116,21 +116,16 @@ p {
     color: var(--color);
 }
 
-/*REDES*/
-
 #redes {
-    margin: 0 96px 0 0;
     display: flex;
     gap: 24px;
     transition: 0.5s;
 }
-
 .social-logo {
     height: 24px;
     transition: 0.5s;
     display: flex;
 }
-
 .social-logo:hover {
     color: var(--color);
     transform: scale(1.2);
@@ -207,14 +202,6 @@ p {
     margin: 0 12px;
     cursor: pointer;
 }
-
-/* .audio-controls #previousButton,
-.audio-controls #playButton,
-.audio-controls #pauseButton,
-.audio-controls #nextButton {
-    width: 96px;
-    height: 96px;
-} */
 
 /*SHOWS*/
 
@@ -310,6 +297,9 @@ p {
     border-radius: 15px;
     transition: background-color 0.3s ease;
 }
+.comprarEntradas h4 {
+    cursor: pointer;
+}
 
 .comprarEntradas a:hover {
     background-color: white;
@@ -325,6 +315,8 @@ p {
     display: flex;
     justify-content: space-evenly;
     padding: 48px 0;
+    height: auto;
+    min-height: 93vh;
 }
 
 .banda-content {
@@ -332,6 +324,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 48px;
+    margin-bottom: 48px;
 }
 
 .banda-content p {
@@ -364,7 +357,7 @@ p {
 
 .tarjetas:hover .detalle {
     transform: translateY(100%);
-    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .tituloTarjeta {
@@ -376,7 +369,7 @@ p {
 }
 
 .contenidoTarjeta {
-    background-color: var(--color);
+    background-color: #a07a1b81;
     color: white;
     height: 32px;
     display: flex;
@@ -388,7 +381,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/tanoWebp.webp");
+    background-image: url("../img/adriBanda.png");
     background-size: cover;
     background-position: center;
 }
@@ -397,7 +390,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/marchoWebp.webp");
+    background-image: url("../img/martinBanda.png");
     background-size: cover;
     background-position: center;
 }
@@ -406,7 +399,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/fede2Webp.webp");
+    background-image: url("../img/fedeBanda.png");
     background-size: cover;
     background-position: top;
 }
@@ -415,7 +408,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/pabloWebp.webp");
+    background-image: url("../img/pabloBanda.png");
     background-size: cover;
     background-position: center;
 }
@@ -424,7 +417,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/mauriWebp.webp");
+    background-image: url("../img/mauriBanda.png");
     background-size: cover;
     background-position: center;
 }
@@ -527,14 +520,6 @@ p {
     height: 64px;
     transition: 0.5s;
 }
-/*.social-logo-discografia:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-Acá, el hover está de más. Ya lo aplicamos a los álbum y
-a veces no es bueno sobrecargar el documento con la misma
-animación.
-*/
 
 /*GALERÍA*/
 #galeria {
@@ -624,6 +609,7 @@ footer h4 {
 
 /*RESOLUCIÓN DE PANTALLA: 1366 x 768*/
 @media screen and (max-width: 1366px) {
+    /*Textos*/
     h1 {
         font-size: 32px;
         cursor: default;
@@ -646,16 +632,17 @@ footer h4 {
         font-weight: 400;
     }
     /*NAV*/
+    .navbar {
+        padding: 0 48px;
+    }
     .nav-list li a {
         font-size: 16px;
         transition: 0.5s;
     }
     .logo-contenedor {
-        margin: 0 0 0 48px;
         transition: 0.5s;
     }
     #redes {
-        margin: 0 48px 0 0;
         transition: 0.5s;
     }
     .marquesina-contenedor {
@@ -676,5 +663,56 @@ footer h4 {
     /*BANDA*/
     #banda {
         height: auto;
+    }
+}
+
+/*TABLET*/
+@media screen and (max-width: 1024px) {
+    /*NAV*/
+    .nav-list {
+        display: flex;
+        gap: 48px;
+        justify-content: center;
+        font-weight: bold;
+    }
+    #redes {
+        position: absolute;
+        top: 96px;
+        right: 48px;
+        margin: 0;
+    }
+    .marquesina-contenedor {
+        top: 120px;
+    }
+    /*INICIO*/
+    #inicio {
+        height: 50vh;
+    }
+    /*SHOWS*/
+    #shows {
+        height: 50vh;
+    }
+    /*CONTACT*/
+    #contacto {
+        display: flex;
+        flex-direction: column;
+    }
+    /*FOOTER*/
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-left {
+        margin-top: -240px;
+        display: flex;
+        gap: 24px;
+        justify-content: end;
+        padding-bottom: 48px;
+    }
+    .footer-right {
+        margin-top: -240px;
+        display: flex;
+        justify-content: end;
+        padding-bottom: 48px;
     }
 }
