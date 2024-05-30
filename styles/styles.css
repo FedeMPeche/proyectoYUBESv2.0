@@ -395,7 +395,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/mauriBanda.png");
+    background-image: url("../img/mauriBanda.webp");
     background-size: cover;
     background-position: center;
 }
@@ -403,7 +403,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/martinBanda.png");
+    background-image: url("../img/martinBanda.webp");
     background-size: cover;
     background-position: center;
 }
@@ -411,7 +411,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/adriBanda.png");
+    background-image: url("../img/adriBanda.webp");
     background-size: cover;
     background-position: center;
 }
@@ -419,7 +419,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/fedeBanda.png");
+    background-image: url("../img/fedeBanda.webp");
     background-size: cover;
     background-position: top;
 }
@@ -427,7 +427,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/pabloBanda.png");
+    background-image: url("../img/pabloBanda.webp");
     background-size: cover;
     background-position: center;
 }
