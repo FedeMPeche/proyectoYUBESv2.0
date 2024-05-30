@@ -169,34 +169,54 @@ p {
 
 /*INICIO*/
 #inicio {
-    background-image: url("../img/FondoDeInicio-FIGMA.webp");
+    /*background-image: url("../img/FondoDeInicio-FIGMA.webp");
     background-size: cover;
-    background-position: top;
+    background-position: top;*/
     height: 100vh;
 }
-
+.video-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+#player-title {
+    text-shadow: 0 2px 4px #00000080;
+}
 #song-info {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-
 #song-title {
     font-size: 24px;
     font-weight: 700;
     cursor: default;
+    text-shadow: 0 2px 4px #00000080;
 }
-
 .audio-controls {
     display: flex;
     justify-content: center;
     margin-top: 24px;
 }
-
 .audio-controls button {
     background: none;
     border: none;
     margin: 0 12px;
     cursor: pointer;
+}
+.audio-controls button img {
+    filter: drop-shadow(0 2px 4px #00000080);
 }
 
 /*SHOWS*/
@@ -227,7 +247,6 @@ p {
 
 .proximosShows {
     width: 960px;
-    height: 290px;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
@@ -283,7 +302,7 @@ p {
     font-weight: 300;
 }
 
-.comprarEntradas a {
+.botonYubes a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -294,11 +313,11 @@ p {
     border-radius: 15px;
     transition: background-color 0.3s ease;
 }
-.comprarEntradas h4 {
+.botonYubes h4 {
     cursor: pointer;
 }
 
-.comprarEntradas a:hover {
+.botonYubes a:hover {
     background-color: white;
     color: black;
 }
@@ -436,7 +455,6 @@ p {
     display: flex;
     gap: 64px;
 }
-
 .discos {
     display: flex;
     justify-content: space-around;
@@ -444,16 +462,12 @@ p {
     justify-content: center;
     gap: 48px;
 }
-
 .disco {
     position: relative;
     width: 300px;
     height: 300px;
     box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.5);
 }
-
-/*IMAGENES DISCOGRAFIA */
-
 .imagen {
     background-size: cover;
     background-position: center center;
@@ -461,7 +475,6 @@ p {
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 #imagen2 {
     margin-left: 15%;
 }
@@ -478,81 +491,114 @@ p {
     align-items: center;
     justify-content: center;
 }
-
 #menu1 {
     left: -324px;
 }
-
 #menu2 {
     right: -324px;
 }
-
 .pMenu {
     line-height: 1.6;
 }
-
 .disco:hover .imagen {
     transform: scale(1.1);
     box-shadow: 0 4px 32px 0px rgba(0, 0, 0, 0.5);
 }
-
 .disco:hover .menu {
     display: flex;
     right: 0;
 }
-
 .disco:not(:hover) .menu {
     right: -300px;
 }
-
-/* REDES SECCION DISCOGRAFIA */
-
 #redes-discografia {
     display: flex;
     gap: 24px;
 }
-
 .social-logo-discografia {
     height: 64px;
     transition: 0.5s;
 }
 
+/*VIDEOS*/
+#youtube {
+    background-color: #0a0a0a;
+    height: auto;
+    text-align: start;
+}
+.youtube-container {
+    padding: 64px;
+    display: flex;
+    gap: 48px;
+}
+.youtube-container iframe {
+}
+.video-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+.video-info-container h2 {
+    font-weight: 900;
+    color: var(--color);
+}
+
+.video-info {
+    width: 352px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
 /*GALERÍA*/
 
 #galeria {
-    display: block;
-    height: 100vh;
-    overflow: hidden;
+    background-color: #0a0a0a;
+    border-top: 24px solid var(--color);
+    border-bottom: 24px solid var(--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 0;
 }
-
-/* ESTILOS PARA EL CARRUSEL */
-.video-container {
-    position: relative;
+#galeria h1 {
+    padding: 96px;
     height: 100%;
+}
+.galeria-content {
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 }
-
-.background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+/*Imagenes de carrusel*/
+.carrusel {
+    display: flex;
+    gap: 4px;
 }
-
-.content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.carrusel li {
+    height: 192px;
+    width: 192px;
+    background-color: #fff;
 }
-
+/*Pestañas de carrusel*/
+.seccionesCarrusel {
+    width: 100%;
+    display: flex;
+}
+.seccionesCarrusel li {
+    height: 192px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seccionesCarrusel li:active {
+    background-color: #a07b1b;
+    color: #fff;
+}
 
 /*CONTACTO*/
 
