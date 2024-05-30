@@ -531,8 +531,6 @@ p {
     display: flex;
     gap: 48px;
 }
-.youtube-container iframe {
-}
 .video-info-container {
     display: flex;
     flex-direction: column;
@@ -543,7 +541,6 @@ p {
     font-weight: 900;
     color: var(--color);
 }
-
 .video-info {
     width: 352px;
     display: flex;
@@ -582,6 +579,7 @@ p {
     height: 192px;
     width: 192px;
     background-color: #fff;
+    cursor: pointer;
 }
 /*Pestañas de carrusel*/
 .seccionesCarrusel {
@@ -594,10 +592,14 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .seccionesCarrusel li:active {
     background-color: #a07b1b;
     color: #fff;
+}
+.seccionesCarrusel li h2 {
+    cursor: pointer;
 }
 
 /*CONTACTO*/
