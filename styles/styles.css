@@ -591,7 +591,7 @@ p {
     width: 192px;
     background-color: #d8d8d8;
     cursor: pointer;
-    border: 2px solid #0a0a0a;
+    border: 4px solid #0a0a0a;
 }
 .carrusel img {
     object-fit: cover; /*La imagen no se deforma*/
@@ -603,6 +603,7 @@ p {
 .seccionesCarrusel {
     width: 100%;
     display: flex;
+    gap: 4px;
 }
 .seccionesCarrusel li {
     height: 192px;
@@ -611,20 +612,17 @@ p {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-.seccionesCarrusel li:active {
-    background-color: #a07b1b;
-    color: #fff;
+    background-color: white;
 }
 .seccionesCarrusel li h2 {
     cursor: pointer;
-}
-.seccionesCarrusel li h2:hover {
-    color: var(--color);
-    transition: 0s;
+    color: black;
 }
 #pestañaShows {
     background-color: var(--color);
+}
+#pestañaShows h2 {
+    color: white;
 }
 
 /*CONTACTO*/
