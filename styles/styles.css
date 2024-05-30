@@ -623,6 +623,9 @@ p {
     color: var(--color);
     transition: 0s;
 }
+#pestañaShows {
+    background-color: var(--color);
+}
 
 /*CONTACTO*/
 
