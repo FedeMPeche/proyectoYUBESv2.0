@@ -173,7 +173,7 @@ p {
 
 /*INICIO*/
 #inicio {
-    background-image: url("../img/FondoDeInicio-FIGMA.png");
+    background-image: url("../img/FondoDeInicio-FIGMA.webp");
     background-size: cover;
     background-position: top;
     height: 100vh;
@@ -309,7 +309,7 @@ p {
 /*BANDA*/
 
 #banda {
-    background-image: url("../img/Banda.png");
+    background-image: url("../img/Banda.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -381,7 +381,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/adriBanda.png");
+    background-image: url("../img/tanoWebp.webp");
     background-size: cover;
     background-position: center;
 }
@@ -390,7 +390,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/martinBanda.png");
+    background-image: url("../img/marchoWebp.webp");
     background-size: cover;
     background-position: center;
 }
@@ -399,7 +399,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/fedeBanda.png");
+    background-image: url("../img/fede2Webp.webp");
     background-size: cover;
     background-position: top;
 }
@@ -408,7 +408,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/pabloBanda.png");
+    background-image: url("../img/pabloWebp.webp");
     background-size: cover;
     background-position: center;
 }
@@ -417,7 +417,7 @@ p {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/mauriBanda.png");
+    background-image: url("../img/mauriWebp.webp");
     background-size: cover;
     background-position: center;
 }
