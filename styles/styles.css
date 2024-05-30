@@ -391,48 +391,43 @@ p {
     align-items: center;
     justify-content: center;
 }
-
-.imagenTano {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: url("../img/tanoWebp.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-.imagenMarcho {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: url("../img/marchoWebp.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-.imagenFede {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: url("../img/fede2Webp.webp");
-    background-size: cover;
-    background-position: top;
-}
-
-.imagenPablo {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: url("../img/pabloWebp.webp");
-    background-size: cover;
-    background-position: center;
-}
-
 .imagenMauri {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../img/mauriWebp.webp");
+    background-image: url("../img/mauriBanda.png");
+    background-size: cover;
+    background-position: center;
+}
+.imagenMarcho {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../img/martinBanda.png");
+    background-size: cover;
+    background-position: center;
+}
+.imagenTano {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../img/adriBanda.png");
+    background-size: cover;
+    background-position: center;
+}
+.imagenFede {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../img/fedeBanda.png");
+    background-size: cover;
+    background-position: top;
+}
+.imagenPablo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../img/pabloBanda.png");
     background-size: cover;
     background-position: center;
 }
@@ -568,19 +563,42 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 48px;
 }
+
 /*Imagenes de carrusel*/
+.carrusel-container {
+    background: rgb(10, 10, 10);
+    background: linear-gradient(
+        90deg,
+        rgba(10, 10, 10, 1) 0%,
+        rgba(0, 0, 0, 0) 5%,
+        rgba(0, 0, 0, 0) 95%,
+        rgba(10, 10, 10, 1) 100%
+    );
+    position: relative;
+    display: flex;
+    width: 98vw;
+    overflow: hidden;
+}
 .carrusel {
     display: flex;
-    gap: 4px;
+    width: 98vw;
 }
 .carrusel li {
     height: 192px;
     width: 192px;
-    background-color: #fff;
+    background-color: #d8d8d8;
     cursor: pointer;
+    border: 2px solid #0a0a0a;
 }
+.carrusel img {
+    object-fit: cover; /*La imagen no se deforma*/
+    height: 192px;
+    width: 192px;
+}
+
 /*Pestañas de carrusel*/
 .seccionesCarrusel {
     width: 100%;
@@ -600,6 +618,10 @@ p {
 }
 .seccionesCarrusel li h2 {
     cursor: pointer;
+}
+.seccionesCarrusel li h2:hover {
+    color: var(--color);
+    transition: 0s;
 }
 
 /*CONTACTO*/
@@ -848,6 +870,10 @@ footer h4 {
     }
     .banda-content p {
         width: 840px;
+    }
+    /*VIDEO*/
+    .video-info {
+        width: 100%;
     }
     /*CONTACTO*/
     .right {
