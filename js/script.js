@@ -1,7 +1,5 @@
 'use strict';
 
-// FORMULARIO DE CONTACTO
-
 // ---------------- AUDIO PLAYER -------------------------------------
 
 const audioFiles = [
