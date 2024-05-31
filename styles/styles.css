@@ -553,11 +553,12 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 48px 0;
+    padding-bottom: 48px;
 }
 #galeria h1 {
-    padding: 96px;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 .galeria-content {
     width: 100%;
@@ -577,21 +578,21 @@ p {
         rgba(0, 0, 0, 0) 95%,
         rgba(10, 10, 10, 1) 100%
     );
-    position: relative;
+    position: static;
+    left: 0;
     display: flex;
     width: 98vw;
     overflow: hidden;
 }
 .carrusel {
     display: flex;
-    width: 98vw;
+    gap: 4px;
 }
 .carrusel li {
     height: 192px;
     width: 192px;
     background-color: #d8d8d8;
     cursor: pointer;
-    border: 4px solid #0a0a0a;
 }
 .carrusel img {
     object-fit: cover; /*La imagen no se deforma*/
@@ -872,10 +873,14 @@ footer h4 {
     .banda-content p {
         width: 840px;
     }
+    .tarjetas {
+        height: 288px;
+    }
     /*VIDEO*/
     .video-info {
         width: 100%;
     }
+    /*GALERIA*/
     /*CONTACTO*/
     .right {
         display: flex;
