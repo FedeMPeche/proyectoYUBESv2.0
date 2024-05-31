@@ -637,6 +637,14 @@ p {
     color: white;
 }
 
+.carrusel-container {
+    display: none; 
+}
+
+.carrusel-container.active {
+    display: block;
+}
+
 /*CONTACTO*/
 
 #contacto {

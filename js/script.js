@@ -190,22 +190,38 @@ document.addEventListener('DOMContentLoaded', function () {
 // INTERACCIONES EN GALERIA //
 
 document.addEventListener('DOMContentLoaded', () => {
- const tabShows = document.querySelector('#pestañaShows');
-
- tabShows.classList.add('active');
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.seccionesCarrusel li');
+  const carruselContainers = document.querySelectorAll('.carrusel-container');
+
+  // Función para ocultar todas las galerías y mostrar solo la activa
+  function showActiveGallery(activeTab) {
+      carruselContainers.forEach(container => {
+          container.classList.remove('active');
+      });
+
+      if (activeTab.id === 'pestañaShows') {
+          document.querySelector('.carrusel-container.shows').classList.add('active');
+      } else if (activeTab.id === 'pestañaProduccion') {
+          document.querySelector('.carrusel-container.produccion').classList.add('active');
+      } else if (activeTab.id === 'pestañaIntimidad') {
+          document.querySelector('.carrusel-container.intimidad').classList.add('active');
+      } else if (activeTab.id === 'pestañaMas') {
+          document.querySelector('.carrusel-container.mas').classList.add('active');
+      }
+  }
 
   tabs.forEach(tab => {
       tab.addEventListener('click', () => {
           tabs.forEach(t => t.classList.remove('active'));
-          
           tab.classList.add('active');
+          showActiveGallery(tab);
       });
   });
+
+  // Inicializar con la primera pestaña activa
+  const initialTab = document.querySelector('#pestañaShows');
+  initialTab.classList.add('active');
+  showActiveGallery(initialTab);
 });
 
 
