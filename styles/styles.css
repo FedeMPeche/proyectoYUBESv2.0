@@ -50,11 +50,16 @@ h5 {
     cursor: default;
     font-weight: 400;
 }
+a {
+    color: white;
+    font-size: 20px;
+}
 p {
     font-size: 20px;
     cursor: default;
     font-weight: 400;
 }
+
 /*Colores*/
 :root {
     --color: #a07b1b;
@@ -102,12 +107,6 @@ p {
     gap: 48px;
     justify-content: center;
     font-weight: bold;
-}
-.nav-list a {
-    color: white;
-    font-size: 20px;
-    transition: 0.5s;
-    display: block;
 }
 .nav-list a:hover {
     transform: scale(1.1);
@@ -330,9 +329,7 @@ p {
     background-position: center;
     display: flex;
     justify-content: space-evenly;
-    padding: 48px 0;
-    height: auto;
-    min-height: calc(100vh - 80px);
+    padding: 64px 0;
 }
 
 .banda-content {
@@ -524,13 +521,14 @@ p {
 .youtube-container {
     padding: 64px;
     display: flex;
+    justify-content: center;
     gap: 48px;
 }
 .video-info-container {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 24px;
+    gap: 48px;
 }
 .video-info-container h2 {
     font-weight: 900;
@@ -541,7 +539,15 @@ p {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 24px;
+    gap: 48px;
+}
+.video-info-description {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.video-info-description h4 {
+    font-weight: 300;
 }
 
 /*GALERÍA*/
@@ -616,7 +622,7 @@ p {
     gap: 4px;
 }
 .seccionesCarrusel li {
-    height: 192px;
+    height: 128px;
     width: 25%;
     display: flex;
     align-items: center;
@@ -707,7 +713,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding: 64px 0 0;
+    padding: 64px 0;
     gap: 48px;
 }
 
@@ -884,17 +890,23 @@ footer h4 {
         font-size: 14px;
         cursor: default;
     }
+    a {
+        font-size: 16px;
+    }
     p {
         font-size: 16px;
         cursor: default;
         font-weight: 400;
     }
+
     /*NAV*/
     .navbar {
         padding: 0 48px;
     }
+    .nav-list {
+        gap: 36px;
+    }
     .nav-list li a {
-        font-size: 16px;
         transition: 0.5s;
     }
     .logo-contenedor {
@@ -919,9 +931,6 @@ footer h4 {
         font-size: 80px;
     }
     /*BANDA*/
-    #banda {
-        height: auto;
-    }
     .banda-content p {
         width: 840px;
     }
@@ -933,6 +942,9 @@ footer h4 {
         width: 100%;
     }
     /*GALERIA*/
+    .seccionesCarrusel li {
+        height: 96px;
+    }
     /*CONTACTO*/
     .right {
         display: flex;
@@ -983,7 +995,7 @@ footer h4 {
     /*NAV*/
     .nav-list {
         display: flex;
-        gap: 48px;
+        gap: 24px;
         justify-content: center;
         font-weight: bold;
     }
@@ -996,25 +1008,30 @@ footer h4 {
     .marquesina-contenedor {
         top: 120px;
     }
-    /*INICIO*/
-    #inicio {
-        height: 50vh;
-    }
     /*SHOWS*/
     #shows {
-        height: 50vh;
+        height: 100%;
+        padding: 64px 0;
+    }
+    /*BANDA*/
+    #banda {
+        height: 100%;
+        padding: 64px 0;
     }
     /*DISCOGRAFIA*/
     .pMenu {
         line-height: 1.6;
         display: none;
     }
+    /*GALERIA*/
+    .seccionesCarrusel li {
+        height: 128px;
+    }
     /*CONTACT*/
     #contacto {
         display: flex;
         flex-direction: column;
     }
-
     /*FOOTER*/
     footer {
         display: flex;
@@ -1041,9 +1058,48 @@ footer h4 {
 
 /*MINI TABLET*/
 @media screen and (max-width: 768px) {
-    /*
-    TODO ESTO LO DEJÉ INCOMPLETÍSIMO PORQUE ME MORÍA DE SUEÑO.
-    HABÍAN COSAS QUE HICE LITERALMENTE DORMIDO ASI QUE DECIDÍ BORRARLO TODO POR LAS DUDAS.
-    MAÑANA (HOY) CUANDO LO AGARRE MÁS FRESCO LO TERMINO EN UN PEDO.
-    */
+    section {
+    }
+    /*SHOWS*/
+    #shows {
+        height: calc(100vh - 80px);
+    }
+    .showsContainer {
+        width: 100%;
+    }
+    .proximosShows {
+        width: 100%;
+        border-radius: 0;
+    }
+    /*BANDA*/
+    #banda {
+        height: calc(100vh - 80px);
+    }
+    .banda-content p {
+        width: 100%;
+        padding: 0 48px;
+    }
+    .tituloTarjeta {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    /*VIDEOS*/
+    .youtube-container {
+        flex-direction: column;
+    }
+    .youtube-container iframe {
+        width: 100%;
+    }
+    .youtube-container h2 {
+        display: none;
+    }
+    .video-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /*GALERIA*/
+    #galeria {
+        height: calc(100vh - 80px);
+    }
 }
