@@ -671,7 +671,7 @@ p {
     max-width: 75%;
     max-height: 75%;
     user-select: none; /* Deshabilitar la selección de la imagen */
-    -webkit-user-drag: none; /*Deshabilitar el arrastre en navegadores basados en WebKit
+    -webkit-user-drag: none; /*Deshabilitar el arrastre en navegadores basados en WebKit */
 }
 
 .blur-background {
