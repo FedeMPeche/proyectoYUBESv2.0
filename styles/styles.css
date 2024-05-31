@@ -644,7 +644,7 @@ p {
 }
 
 .carrusel-container {
-    display: none; 
+    display: none;
 }
 
 .carrusel-container.active {
@@ -676,7 +676,7 @@ p {
 .expanded-img-container img {
     max-width: 75%;
     max-height: 75%;
-    user-select: none; 
+    user-select: none;
     -webkit-user-drag: none;
 }
 
@@ -948,7 +948,7 @@ footer h4 {
     /*CONTACTO*/
     .right {
         display: flex;
-        padding: 48px 0 0;
+        padding: 48px 0;
         gap: 36px;
     }
     #form {
@@ -987,6 +987,9 @@ footer h4 {
     }
     footer p {
         font-size: 14px;
+    }
+    .dev-container {
+        gap: 12px;
     }
 }
 
@@ -1031,6 +1034,9 @@ footer h4 {
     #contacto {
         display: flex;
         flex-direction: column;
+    }
+    .right {
+        padding: 64px 0;
     }
     /*FOOTER*/
     footer {
@@ -1099,5 +1105,115 @@ footer h4 {
     /*GALERIA*/
     #galeria {
         height: calc(100vh - 80px);
+    }
+    /*CONTACTO*/
+    .right {
+        padding: 48px 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    /*NAV*/
+    .navbar {
+        justify-content: start;
+        padding: 0 16px;
+    }
+    .nav-list {
+        display: none;
+    }
+    #redes {
+        display: none;
+    }
+    .marquesina-contenedor {
+        display: none;
+    }
+    /*SHOWS*/
+    #shows {
+        height: auto;
+    }
+    .proximosShows {
+        flex-direction: column;
+        gap: 16px;
+        padding: 64px 16px;
+    }
+    .show-info {
+        gap: 16px;
+    }
+    .fecha {
+        height: 100%;
+        width: 128px;
+        justify-content: start;
+    }
+    .añoFecha {
+        color: white;
+        width: 100%;
+        background-color: var(--color);
+        padding: 4px 0;
+        border-radius: 16px 16px 0 0;
+    }
+    .fecha-diames {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .diaFecha {
+        font-size: 64px;
+        padding: 0;
+        height: 64px;
+    }
+    .detalleFecha {
+        text-align: start;
+    }
+    .botonYubes {
+        width: 100%;
+    }
+    /*BANDA*/
+    .banda-content p {
+        padding: 0 16px;
+    }
+    #banda {
+        height: auto;
+        background: #0a0a0a;
+    }
+    .contenedorTarjetas {
+        flex-direction: column;
+    }
+    .tarjetas {
+        width: 100%;
+    }
+    /*DISCOGRAFIA*/
+    .discos {
+        gap: 32px;
+    }
+    .disco {
+        width: 144px;
+        height: 144px;
+    }
+    /*VIDEOCLIPS*/
+    .youtube-container {
+        padding: 64px 16px;
+        gap: 16px;
+    }
+    .video-info {
+        flex-direction: column;
+        gap: 64px;
+    }
+    /*GALERIA*/
+    .galeria-title {
+        width: 100%;
+        padding: 0 16px;
+    }
+    .seccionesCarrusel li {
+        height: 96px;
+    }
+    .seccionesCarrusel h2 {
+        font-size: 16px;
+    }
+    /*FORM*/
+    #formularioContacto {
+        width: 100%;
+        padding: 0 16px;
     }
 }
