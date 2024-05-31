@@ -222,7 +222,161 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialTab = document.querySelector('#pestañaShows');
   initialTab.classList.add('active');
   showActiveGallery(initialTab);
+
+  // Lógica para expandir la imagen al hacer clic y navegación por desplazamiento
+  const galeriaContent = document.querySelector('.galeria-content');
+  const expandedImgContainer = document.createElement('div');
+  expandedImgContainer.classList.add('expanded-img-container');
+  document.body.appendChild(expandedImgContainer);
+
+  let currentImageIndex = 0;
+  let currentImages = [];
+
+  galeriaContent.addEventListener('click', (event) => {
+      if (event.target.tagName === 'IMG') {
+          const imgElements = event.target.closest('.carrusel').querySelectorAll('img');
+          currentImages = Array.from(imgElements);
+          currentImageIndex = currentImages.indexOf(event.target);
+
+          showExpandedImage(currentImages[currentImageIndex].src);
+          expandedImgContainer.classList.add('show-expanded-img');
+          galeriaContent.classList.add('blur-background');
+      }
+  });
+
+  expandedImgContainer.addEventListener('click', (event) => {
+      // Solo cerrar si se hace clic fuera de la imagen
+      if (event.target.tagName !== 'IMG') {
+          closeExpandedImage();
+      }
+  });
+
+  // Función para mostrar la imagen expandida
+  function showExpandedImage(src) {
+      expandedImgContainer.innerHTML = '';
+      const expandedImg = document.createElement('img');
+      expandedImg.src = src;
+      expandedImgContainer.appendChild(expandedImg);
+  }
+
+  // Función para cerrar la imagen expandida
+  function closeExpandedImage() {
+      expandedImgContainer.classList.remove('show-expanded-img');
+      galeriaContent.classList.remove('blur-background');
+  }
+
+  // Manejo de gestos táctiles
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  expandedImgContainer.addEventListener('touchstart', (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+  });
+
+  expandedImgContainer.addEventListener('touchend', (event) => {
+      touchEndX = event.changedTouches[0].screenX;
+      handleSwipeGesture();
+  });
+
+  // Manejo de eventos de arrastre del ratón
+  let mouseStartX = 0;
+  let isDragging = false;
+
+  expandedImgContainer.addEventListener('mousedown', (event) => {
+      mouseStartX = event.clientX;
+      isDragging = true;
+      expandedImgContainer.classList.add('dragging');
+  });
+
+  expandedImgContainer.addEventListener('mousemove', (event) => {
+      if (isDragging) {
+          event.preventDefault(); // Previene la selección de texto mientras se arrastra
+      }
+  });
+
+  expandedImgContainer.addEventListener('mouseup', (event) => {
+      if (isDragging) {
+          const mouseEndX = event.clientX;
+          handleMouseSwipe(mouseStartX, mouseEndX);
+          isDragging = false;
+          expandedImgContainer.classList.remove('dragging');
+      }
+  });
+
+  expandedImgContainer.addEventListener('mouseleave', (event) => {
+      if (isDragging) {
+          const mouseEndX = event.clientX;
+          handleMouseSwipe(mouseStartX, mouseEndX);
+          isDragging = false;
+          expandedImgContainer.classList.remove('dragging');
+      }
+  });
+
+  function handleSwipeGesture() {
+      if (touchEndX < touchStartX) {
+          // Desplazamiento hacia la izquierda
+          currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+      } else if (touchEndX > touchStartX) {
+          // Desplazamiento hacia la derecha
+          currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+      }
+      showExpandedImage(currentImages[currentImageIndex].src);
+  }
+
+  function handleMouseSwipe(startX, endX) {
+      if (endX < startX) {
+          // Desplazamiento hacia la izquierda
+          currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+      } else if (endX > startX) {
+          // Desplazamiento hacia la derecha
+          currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+      }
+      showExpandedImage(currentImages[currentImageIndex].src);
+  }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+ 
+  var scrollContainer = document.querySelector(".carrusel-scroll-container");
+
+  // Variables para almacenar la posición inicial del mouse/touch
+  var startX;
+  var scrollLeft;
+
+  // Variable para almacenar si el usuario está actualmente arrastrando
+  var isDown = false;
+
+  // Escucha el evento 'mousedown' (o 'touchstart' para dispositivos táctiles)
+  scrollContainer.addEventListener("mousedown", function(e) {
+      isDown = true;
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+  });
+  
+  // Escucha el evento 'mouseleave' para cuando el usuario sale del contenedor mientras arrastra
+  scrollContainer.addEventListener("mouseleave", function() {
+      isDown = false;
+  });
+
+  // Escucha el evento 'mouseup' (o 'touchend' para dispositivos táctiles)
+  scrollContainer.addEventListener("mouseup", function() {
+      isDown = false;
+  });
+
+  // Escucha el evento 'mousemove' (o 'touchmove' para dispositivos táctiles)
+  scrollContainer.addEventListener("mousemove", function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - scrollContainer.offsetLeft;
+      var walk = (x - startX) * 2; // Ajusta la velocidad de desplazamiento
+      scrollContainer.scrollLeft = scrollLeft - walk;
+  });
+});
+
+
+
+
 
 
 

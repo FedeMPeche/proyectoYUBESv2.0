@@ -645,6 +645,39 @@ p {
     display: block;
 }
 
+/*Efectos de expandido de imagen y blur al fondo */
+
+.expanded-img-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.expanded-img-container.show-expanded-img {
+    visibility: visible;
+    opacity: 1;
+}
+
+.expanded-img-container img {
+    max-width: 75%;
+    max-height: 75%;
+    user-select: none; /* Deshabilitar la selección de la imagen */
+    -webkit-user-drag: none; /*Deshabilitar el arrastre en navegadores basados en WebKit
+}
+
+.blur-background {
+    filter: blur(5px);
+}
+
 /*CONTACTO*/
 
 #contacto {
