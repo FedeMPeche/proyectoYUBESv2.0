@@ -209,11 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const tabs = document.querySelectorAll('.')
-
-// });
-
 
 
 
