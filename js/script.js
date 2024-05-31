@@ -190,6 +190,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // INTERACCIONES EN GALERIA //
 
 document.addEventListener('DOMContentLoaded', () => {
+ const tabShows = document.querySelector('#pestañaShows');
+
+ tabShows.classList.add('active');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.seccionesCarrusel li');
 
   tabs.forEach(tab => {
@@ -202,8 +209,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const tabs = document.querySelectorAll('.')
 
-
+// });
 
 
 
