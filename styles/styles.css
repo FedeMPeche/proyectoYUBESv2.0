@@ -547,7 +547,12 @@ p {
 /*GALERÍA*/
 
 #galeria {
-    background-color: #0a0a0a;
+    background: rgb(26, 26, 26);
+    background: radial-gradient(
+        circle,
+        rgba(26, 26, 26, 1) 0%,
+        rgba(10, 10, 10, 1) 66%
+    );
     border-top: 24px solid var(--color);
     border-bottom: 24px solid var(--color);
     display: flex;
@@ -555,17 +560,21 @@ p {
     justify-content: space-between;
     padding-bottom: 48px;
 }
-#galeria h1 {
+
+.galeria-title {
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 48px;
 }
 .galeria-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 24px;
 }
 
 /*Imagenes de carrusel*/
