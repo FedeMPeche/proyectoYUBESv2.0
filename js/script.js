@@ -193,13 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.seccionesCarrusel li');
   const carruselContainers = document.querySelectorAll('.carrusel-container');
 
-// Inicializar con la primera pestaña activa
-document.addEventListener('DOMContentLoaded', () => {
-  const initialTab = document.querySelector('#pestañaShows');
-  initialTab.classList.add('active');
-  showActiveGallery(initialTab);
-  });
-
 // Función para ocultar todas las galerías y mostrar solo la activa
   function showActiveGallery(activeTab) {
       carruselContainers.forEach(container => {
@@ -222,6 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
           tabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
           showActiveGallery(tab);
+      });
+
+      // Inicializar con la primera pestaña activa
+      document.addEventListener('DOMContentLoaded', () => {
+      const initialTab = document.querySelector('#pestañaShows');
+      initialTab.classList.add('active');
+      showActiveGallery(initialTab);
       });
   });
 
