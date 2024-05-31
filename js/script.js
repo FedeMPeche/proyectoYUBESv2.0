@@ -189,6 +189,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // INTERACCIONES EN GALERIA //
 
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.seccionesCarrusel li');
+
+  tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          
+          tab.classList.add('active');
+      });
+  });
+});
+
+
 
 
 

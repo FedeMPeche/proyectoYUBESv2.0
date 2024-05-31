@@ -619,10 +619,12 @@ p {
     cursor: pointer;
     color: black;
 }
-#pestañaShows {
+
+.seccionesCarrusel li.active {
     background-color: var(--color);
 }
-#pestañaShows h2 {
+
+.seccionesCarrusel li.active h2 {
     color: white;
 }
 
