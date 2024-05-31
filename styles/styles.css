@@ -1058,8 +1058,6 @@ footer h4 {
 
 /*MINI TABLET*/
 @media screen and (max-width: 768px) {
-    section {
-    }
     /*SHOWS*/
     #shows {
         height: calc(100vh - 80px);

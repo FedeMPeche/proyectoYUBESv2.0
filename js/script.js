@@ -336,47 +336,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
- 
-  var scrollContainer = document.querySelector(".carrusel-scroll-container");
-
-  // Variables para almacenar la posición inicial del mouse/touch
-  var startX;
-  var scrollLeft;
-
-  // Variable para almacenar si el usuario está actualmente arrastrando
-  var isDown = false;
-
-  // Escucha el evento 'mousedown' (o 'touchstart' para dispositivos táctiles)
-  scrollContainer.addEventListener("mousedown", function(e) {
-      isDown = true;
-      startX = e.pageX - scrollContainer.offsetLeft;
-      scrollLeft = scrollContainer.scrollLeft;
-  });
-  
-  // Escucha el evento 'mouseleave' para cuando el usuario sale del contenedor mientras arrastra
-  scrollContainer.addEventListener("mouseleave", function() {
-      isDown = false;
-  });
-
-  // Escucha el evento 'mouseup' (o 'touchend' para dispositivos táctiles)
-  scrollContainer.addEventListener("mouseup", function() {
-      isDown = false;
-  });
-
-  // Escucha el evento 'mousemove' (o 'touchmove' para dispositivos táctiles)
-  scrollContainer.addEventListener("mousemove", function(e) {
-      if (!isDown) return;
-      e.preventDefault();
-      var x = e.pageX - scrollContainer.offsetLeft;
-      var walk = (x - startX) * 2; // Ajusta la velocidad de desplazamiento
-      scrollContainer.scrollLeft = scrollLeft - walk;
-  });
-});
-
-
-
-
 
 
 
