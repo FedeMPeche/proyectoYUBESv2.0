@@ -339,19 +339,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Barra de navegación en dispositivo móvil
-const navbarBoton = document.querySelector('#navbarBoton');
-const navbarImg = document.querySelector('#navbarImg');
-const navbar = document.querySelector('#navbarResponsive');
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarBoton = document.getElementById('navbarBoton');
+  const navbarResponsive = document.getElementById('navbarResponsive');
+  const menuLinks = document.querySelectorAll('.navlist-responsive a');
+  const mainContent = document.querySelector('main');
+  const footerContent = document.querySelector('footer');
 
-navbarBoton.onclick = function () {
-  navbar.classList.toggle('open');
+  // Función para mostrar/ocultar el menú y aplicar/quitar el efecto blur
+  navbarBoton.addEventListener('click', () => {
+      navbarResponsive.classList.toggle('open');
+      mainContent.classList.toggle('blur'); // Agregar o quitar la clase blur al main
+      footerContent.classList.toggle('blur'); // Agregar o quitar la clase blur al footer
+  });
 
-  if (navbarImg.src.match('img/menu.svg')) {
-    navbarImg.src = 'img/close.svg'
-  } else {
-    navbarImg.src = 'img/menu.svg'
-  }
-}
+  // Función para cerrar el menú cuando se hace clic en un enlace y quitar el efecto blur
+  menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+          navbarResponsive.classList.remove('open');
+          mainContent.classList.remove('blur'); // Quitar la clase blur al main
+          footerContent.classList.remove('blur'); // Quitar la clase blur al footer
+      });
+  });
+});
+
+
 
 
 

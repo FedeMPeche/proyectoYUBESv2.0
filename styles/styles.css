@@ -1147,9 +1147,10 @@ footer h4 {
     justify-content: center;
     gap: 16px;
     overflow: hidden;
-    transition: ease 0.3s;
+    visibility: hidden;
+    transition: height 0.3s ease, visibility 0.3s ease;
 }
-.navbar-responsive /*Ocultar NAV*/ {
+.navbar-responsive {
     visibility: hidden;
 }
 .navbar-responsive.open {
@@ -1190,6 +1191,13 @@ footer h4 {
 }
 .redes-responsive img {
     height: 32px;
+}
+
+/* EFECTO BLUR PARA CUANDO SE DESPLIEGA LA NAV */
+
+main.blur, footer.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
