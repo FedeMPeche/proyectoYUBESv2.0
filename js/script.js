@@ -193,7 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.seccionesCarrusel li');
   const carruselContainers = document.querySelectorAll('.carrusel-container');
 
-  // Función para ocultar todas las galerías y mostrar solo la activa
+// Inicializar con la primera pestaña activa
+document.addEventListener('DOMContentLoaded', () => {
+  const initialTab = document.querySelector('#pestañaShows');
+  initialTab.classList.add('active');
+  showActiveGallery(initialTab);
+  });
+
+// Función para ocultar todas las galerías y mostrar solo la activa
   function showActiveGallery(activeTab) {
       carruselContainers.forEach(container => {
           container.classList.remove('active');
@@ -217,11 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
           showActiveGallery(tab);
       });
   });
-
-  // Inicializar con la primera pestaña activa
-  const initialTab = document.querySelector('#pestañaShows');
-  initialTab.classList.add('active');
-  showActiveGallery(initialTab);
 
   // Lógica para expandir la imagen al hacer clic y navegación por desplazamiento
   const galeriaContent = document.querySelector('.galeria-content');
