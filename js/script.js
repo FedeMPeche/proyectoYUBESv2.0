@@ -1,5 +1,10 @@
 'use strict';
 
+//VERIFICACIÓN CAPTCHA FORMULARIO
+function onSubmit(token) {
+  document.getElementById("formularioContacto").submit();
+}
+
 // ---------------- AUDIO PLAYER -------------------------------------
 
 const audioFiles = [
@@ -218,11 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Inicializar con la primera pestaña activa
-    document.addEventListener('DOMContentLoaded', () => {
       const initialTab = document.querySelector('#pestañaShows');
       initialTab.classList.add('active');
       showActiveGallery(initialTab);
-    });
   });
 
   // Lógica para expandir la imagen al hacer clic y navegación por desplazamiento

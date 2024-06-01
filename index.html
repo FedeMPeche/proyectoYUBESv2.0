@@ -10,6 +10,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfmB-4pAAAAAOgNRLT-Uc6Iir44EmAmqNOR-ZAG"></script>
+
 </head>
 
 <body>
@@ -417,7 +420,7 @@
             <div class="right">
                 <div id="form">
                     <h1>CONTACTANOS</h1>
-                    <form id="formularioContacto" method="POST">
+                    <form action="validarCaptcha.php" method="POST" id="formularioContacto">
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
                         </div>
@@ -430,11 +433,26 @@
                         <div class="form-group">
                             <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                         </div>
-                        <button type="submit" id="enviarBtn">
+                        <button class="g-recaptcha" 
+                        data-sitekey="6LfmB-4pAAAAAOgNRLT-Uc6Iir44EmAmqNOR-ZAG" 
+                        data-callback='onSubmit' 
+                        data-action='submit' id="enviarBtn">
                             <h4>ENVIAR ➝</h4>
                         </button>
                     </form>
                 </div>
+                
+                <script>
+                    function onClick(e) {
+                        e.preventDefault();
+                        grecaptcha.ready(function() {
+                            grecaptcha.execute('6LfmB-4pAAAAAOgNRLT-Uc6Iir44EmAmqNOR-ZAG', { action: 'submit' }).then(function(token) {
+                                document.getElementById("formularioContacto").insertAdjacentHTML('beforeend', '<input type="hidden" name="token" value="' + token + '">');
+                                document.getElementById("formularioContacto").submit();
+                            });
+                        });
+                    }
+                </script>
 
                 <div class="redes-contact">
                     <h4>SEGUINOS EN:</h4>
