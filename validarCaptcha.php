@@ -1,4 +1,4 @@
-$recaptcha_secret = "6LfmB-4pAAAAAO62bpkQKNTtrnmg1UhcEHD400et";
+$recaptcha_secret = "";
 $response = $_POST['g-recaptcha-response'];
 
 $url = 'https://www.google.com/recaptcha/api/siteverify';
