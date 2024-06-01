@@ -1,10 +1,5 @@
 'use strict';
 
-//VERIFICACIÓN CAPTCHA FORMULARIO
-function onSubmit(token) {
-  document.getElementById("formularioContacto").submit();
-}
-
 // ---------------- AUDIO PLAYER -------------------------------------
 
 const audioFiles = [
