@@ -21,7 +21,6 @@ $captcha_success = json_decode($verify);
 if ($captcha_success->success == false) {
     echo "Error en la verificación, intente de nuevo.";
 } else if ($captcha_success->success == true) {
-    // Aquí va la lógica para procesar el formulario, por ejemplo:
     
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
