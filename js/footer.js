@@ -4,10 +4,3 @@
 function onSubmit(token) {
   document.getElementById("formularioContacto").submit();
 }
-
-
-
-
-
-
-
