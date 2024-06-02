@@ -2,20 +2,28 @@
 
 // EVENTO DE CLICK PARA CAMBIAR DE COLOR EL NOMBRE DE LAS SECCIONES //
 
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-list li a');
   const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
   function changeActiveLink() {
-    let index = sections.length;
+    let index = -1;
+    
+    // Buscar la sección actual
+    sections.forEach((section, i) => {
+      const sectionTop = section.offsetTop - navbarHeight;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        index = i;
+      }
+    });
 
-    while (--index && window.scrollY + navbarHeight + 1 < sections[index].offsetTop) { }
-
-    navLinks.forEach((link) => link.classList.remove('active'));
-
-    // Asegurarse de que el índice está dentro del rango
+    // Establecer la clase 'active' en el enlace correspondiente
     if (index >= 0 && index < navLinks.length) {
+      navLinks.forEach((link) => link.classList.remove('active'));
       navLinks[index].classList.add('active');
     } else {
       console.warn('Índice fuera de rango:', index);
@@ -40,10 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Asignar la clase 'active' a la sección "Inicio" cuando la página se carga
+  navLinks[0].classList.add('active');
+
+  // Asignar eventos de clic a los enlaces de la barra de navegación
   navLinks.forEach((link) => {
     link.addEventListener('click', scrollToSection);
   });
 
-  changeActiveLink();
+  // Actualizar el estado de la navegación al desplazarse
   window.addEventListener('scroll', changeActiveLink);
 });
