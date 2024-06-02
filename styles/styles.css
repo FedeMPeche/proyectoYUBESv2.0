@@ -16,6 +16,7 @@ body {
     letter-spacing: -0.5px;
     color: white;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 /* ESTILOS PARA LAS DISTINTAS SECCIONES */
