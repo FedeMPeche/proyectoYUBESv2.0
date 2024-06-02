@@ -103,12 +103,13 @@
 
     <main>
         <!-- PÁGINA 1 'INICIO'-->
-        <section id="inicio">
+        <section id="inicio" data-script="inicio.js">
             <div class="video-container">
                 <video autoplay muted loop class="background-video">
                     <source src="videos/videoInicio8Mb.mp4" type="video/mp4">
                 </video>
             </div>
+
             <div class="contenido">
                 <h2 class="animatedReproductor" id="player-title">¡Dale play y disfrutá de Yubes!</h2>
 
@@ -131,7 +132,7 @@
         </section>
 
         <!-- PÁGINA 2 'SHOWS'-->
-        <section id="shows">
+        <section id="shows" data-script="shows.js">
             <div class="showsContainer">
                 <div class="dosPalabras">
                     <h1 class="tituloPintado">PRÓXIMOS</h1>
@@ -165,7 +166,7 @@
         </section>
 
         <!-- PÁGINA 3 'BANDA'-->
-        <section id="banda">
+        <section id="banda" data-script="banda.js">
 
             <div class="banda-content">
                 <div class="dosPalabras">
@@ -235,7 +236,7 @@
         </section>
 
         <!-- PÁGINA 4 'DISCOGRAFIA'-->
-        <section id="discografia">
+        <section id="discografia" data-script="discografia.js">
             <h1>DISCOGRAFÍA</h1>
             <div class="discos">
                 <div class="disco">
@@ -289,6 +290,7 @@
         </section>
 
         <!-- PÁGINA 4.5 'VIDEOS'-->
+        <section data-script="youtubeSection.js>
         <div id="youtube">
             <div class="youtube-container" data-video-id="HwWjmEEh_OA">
                 <div class="youtube-thumbnail"
@@ -310,9 +312,10 @@
                 </div>
             </div>
         </div>
+        </section>
 
         <!-- PÁGINA 5 'GALERIA'-->
-        <section id="galeria">
+        <section id="galeria" data-script="galleria.js">
 
             <div class="galeria-title">
                 <h1>GALERÍA</h1>
@@ -405,7 +408,7 @@
         </section>
 
         <!-- PÁGINA 6 'CONTACTO'-->
-        <section id="contacto">
+        <section id="contacto" data-script="contacto.js">
             <div class="left"></div>
             <div class="right">
                 <div id="form">
@@ -486,8 +489,12 @@
             <p>© 2024 YUBES ROCK - Todos los derechos reservados</p>
         </section>
     </footer>
-
+    <script src="js/inicio.js"></script>
+    <script src="js/mobileNavbar.js"></script>
+    <script src="js/highlight.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/gesturaControl.js"></script>
+    <script src="js/youtubeSection.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
