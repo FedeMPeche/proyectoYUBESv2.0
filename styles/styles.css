@@ -1316,3 +1316,20 @@ footer.blur {
         padding: 0 16px;
     }
 }
+
+/*ORIENTACION LANDSCAPE CELULARES */
+
+@media screen and (max-width: 1280px) and ( orientation: landscape ) {
+    section {
+        min-height: 768px;
+    }
+    .background-video{
+        display: none;
+    }
+    #inicio {
+        background-image: url("../img/FondoDeInicio-FIGMA.webp");
+        background-size: cover;
+        background-position: top;
+        height: 100vh;
+    }
+}
