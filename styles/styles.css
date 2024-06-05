@@ -197,6 +197,7 @@ p {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 #player-title {
     text-shadow: 0 2px 4px #00000080;
