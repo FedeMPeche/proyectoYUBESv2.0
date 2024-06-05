@@ -7,7 +7,6 @@
     list-style: none;
     text-decoration: none;
     transition: 0.5s ease;
-    transition: color none;
 }
 
 html,
@@ -35,32 +34,39 @@ section {
 h1 {
     font-size: 48px;
     cursor: default;
+    transition: none;
 }
 h2 {
     font-size: 32px;
     cursor: default;
+    transition: none;
 }
 h3 {
     font-size: 24px;
     cursor: default;
+    transition: none;
 }
 h4 {
     font-size: 20px;
     cursor: default;
+    transition: none;
 }
 h5 {
     font-size: 16px;
     cursor: default;
     font-weight: 400;
+    transition: none;
 }
 a {
     color: white;
     font-size: 20px;
+    transition: none;
 }
 p {
     font-size: 20px;
     cursor: default;
     font-weight: 400;
+    transition: none;
 }
 
 /*Colores*/
@@ -1027,6 +1033,10 @@ footer h4 {
     }
     .marquesina-contenedor {
         top: 120px;
+    }
+    /*INICIO*/
+    #inicio {
+        height: 768px;
     }
     /*SHOWS*/
     #shows {
