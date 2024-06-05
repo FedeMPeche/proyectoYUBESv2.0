@@ -1047,11 +1047,6 @@ footer h4 {
     }
     .video-container {
         height: 768px;
-        width: 100%;
-        min-width: 100%;
-        min-height: 100%;
-        z-index: -1;
-        overflow: hidden;
     }
     /*SHOWS*/
     #shows {
@@ -1062,6 +1057,10 @@ footer h4 {
     #banda {
         height: 100%;
         padding: 64px 0;
+    }
+    .tituloTarjeta {
+        font-size: 16px;
+        font-weight: 900;
     }
     /*DISCOGRAFIA*/
     .pMenu {
