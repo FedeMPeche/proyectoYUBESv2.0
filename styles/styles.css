@@ -6,7 +6,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.5s ease;
+    transition: color none;
 }
 
 html,
@@ -84,7 +85,6 @@ p {
 .logo-contenedor {
     display: flex;
     align-items: center;
-    transition: 0.5s;
 }
 
 .logo-contenedor a {
@@ -120,17 +120,14 @@ p {
 #redes {
     display: flex;
     gap: 24px;
-    transition: 0.5s;
 }
 .social-logo {
     height: 24px;
-    transition: 0.5s;
     display: flex;
 }
 .social-logo:hover {
     color: var(--color);
     transform: scale(1.2);
-    transition: 0.5s;
 }
 
 /* ESTILOS PARA MARQUESINA */
@@ -376,7 +373,7 @@ p {
 
 .tarjetas:hover .detalle {
     transform: translateY(100%);
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .tituloTarjeta {
@@ -517,7 +514,6 @@ p {
 }
 .social-logo-discografia {
     height: 64px;
-    transition: 0.5s;
 }
 
 /*VIDEOS*/
