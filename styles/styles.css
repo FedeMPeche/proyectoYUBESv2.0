@@ -1060,7 +1060,7 @@ footer h4 {
     #banda {
         height: 100%;
         padding: 64px 0;
-        background-attachment: none;
+        background-attachment: fixed;
     }
     .tituloTarjeta {
         font-size: 16px;
@@ -1079,6 +1079,9 @@ footer h4 {
     #contacto {
         display: flex;
         flex-direction: column;
+    }
+    .left {
+        background-attachment: fixed;
     }
     .right {
         padding: 64px 0;
