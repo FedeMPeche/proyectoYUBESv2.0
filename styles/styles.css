@@ -186,6 +186,7 @@ p {
     min-height: 100%;
     z-index: -1;
     overflow: hidden;
+    display: none;
 }
 .background-video {
     position: absolute;
