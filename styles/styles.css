@@ -182,12 +182,16 @@ p {
     position: absolute;
     height: 100%;
     width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
+    overflow: hidden;
 }
 .background-video {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
+    object-fit: cover;
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -1037,6 +1041,14 @@ footer h4 {
     #inicio {
         height: 768px;
     }
+    .video-container {
+        height: 768px;
+        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
     /*SHOWS*/
     #shows {
         height: 100%;
@@ -1327,13 +1339,20 @@ footer.blur {
 }
 
 @media screen and (max-height: 414px) {
+    .navbar {
+        height: 48px;
+    }
+    #inicio {
+        height: 414px;
+    }
     .marquesina-contenedor {
         margin: 0 0 0 48px;
+        top: 88px;
         left: 0;
     }
     #redes {
         position: absolute;
-        top: 96px;
+        top: 64px;
         left: 48px;
         margin: 0;
     }
