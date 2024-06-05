@@ -416,7 +416,7 @@
             <div class="right">
                 <div id="form">
                     <h1>CONTACTANOS</h1>
-                    <form id="formularioContacto" action="validar.php" method="post">
+                    <form id="formularioContacto" method="post">
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
                         </div>
@@ -429,8 +429,7 @@
                         <div class="form-group">
                             <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                         </div>
-                        <button class="g-recaptcha" data-sitekey="6LfmB-4pAAAAAOgNRLT-Uc6Iir44EmAmqNOR-ZAG"
-                            data-callback='onSubmit' data-action='submit' id="enviarBtn">
+                        <button type="submit" id="enviarBtn">
                             <h4>ENVIAR ➝</h4>
                         </button>
                     </form>
