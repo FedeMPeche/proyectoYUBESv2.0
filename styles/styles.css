@@ -648,15 +648,19 @@ p {
     cursor: pointer;
     color: black;
 }
-
 .seccionesCarrusel li.active {
     background-color: var(--color);
 }
-
 .seccionesCarrusel li.active h2 {
     color: white;
 }
-
+.seccionesCarrusel a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .carrusel-container {
     display: none;
 }
@@ -1300,7 +1304,7 @@ footer.blur {
         width: 100%;
     }
     .tituloTarjeta {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 900;
     }
     /*DISCOGRAFIA*/
