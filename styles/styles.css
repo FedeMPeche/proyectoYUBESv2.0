@@ -1021,6 +1021,9 @@ footer h4 {
 
 /*TABLET*/
 @media screen and (max-width: 1024px) {
+    * {
+        transition: none;
+    }
     /*SECTION*/
     section {
         height: 100%;
