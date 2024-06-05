@@ -1,13 +1,10 @@
 'use strict';
 
-// EVENTO DE CLICK PARA CAMBIAR DE COLOR EL NOMBRE DE LAS SECCIONES //
-
-'use strict';
-
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-list li a');
-  const navbarHeight = document.querySelector('.navbar').offsetHeight;
+  const navbar = document.querySelector('.navbar');
+  const navbarHeight = navbar.offsetHeight;
 
   function changeActiveLink() {
     let index = -1;
