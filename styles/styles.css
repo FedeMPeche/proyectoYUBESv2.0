@@ -188,7 +188,7 @@ p {
     overflow: hidden;
 }
 .background-video {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     object-fit: cover;
