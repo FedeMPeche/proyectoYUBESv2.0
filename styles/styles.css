@@ -23,7 +23,6 @@ body {
 /* ESTILOS PARA LAS DISTINTAS SECCIONES */
 section {
     height: calc(100vh - 80px);
-    min-height: 768px;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -195,6 +194,7 @@ p {
 }
 #player-title {
     text-shadow: 0 2px 4px #00000080;
+    transition: none;
 }
 #song-info {
     opacity: 0;
@@ -336,7 +336,7 @@ p {
     background-position: center;
     background-attachment: fixed;
     display: flex;
-    justify-content: space-evenly;
+    gap: 48px;
     padding: 64px 0;
 }
 
@@ -345,7 +345,6 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 48px;
-    margin-bottom: 48px;
 }
 
 .banda-content p {
@@ -454,6 +453,7 @@ p {
     );
     display: flex;
     gap: 64px;
+    padding: 64px;
 }
 .discos {
     display: flex;
@@ -572,7 +572,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 48px;
+    padding-bottom: 24px;
 }
 
 .galeria-title {
@@ -582,6 +582,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 48px;
+    padding: 64px 0;
 }
 .galeria-content {
     width: 100%;
@@ -702,6 +703,7 @@ p {
 .left {
     width: 100%;
     height: 100%;
+    min-height: 320px;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.33)),
         url("../img/footer.webp");
     background-size: cover;
@@ -1010,6 +1012,10 @@ footer h4 {
 
 /*TABLET*/
 @media screen and (max-width: 1024px) {
+    /*SECTION*/
+    section {
+        height: 100%;
+    }
     /*NAV*/
     .nav-list {
         display: flex;
@@ -1049,6 +1055,9 @@ footer h4 {
     #contacto {
         display: flex;
         flex-direction: column;
+    }
+    .left {
+        background-attachment: fixed;
     }
     .right {
         padding: 64px 0;
@@ -1090,9 +1099,6 @@ footer h4 {
         font-size: 32px;
     }
     /*SHOWS*/
-    #shows {
-        height: calc(100vh - 80px);
-    }
     .showsContainer {
         width: 100%;
     }
@@ -1101,9 +1107,6 @@ footer h4 {
         border-radius: 0;
     }
     /*BANDA*/
-    #banda {
-        height: calc(100vh - 80px);
-    }
     .banda-content p {
         width: 100%;
         padding: 0 48px;
@@ -1126,10 +1129,6 @@ footer h4 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-    /*GALERIA*/
-    #galeria {
-        height: calc(100vh - 80px);
     }
     /*CONTACTO*/
     .right {
@@ -1277,10 +1276,6 @@ footer.blur {
     .banda-content p {
         padding: 0 16px;
     }
-    #banda {
-        height: auto;
-        background: #0a0a0a;
-    }
     .contenedorTarjetas {
         flex-direction: column;
     }
@@ -1311,7 +1306,7 @@ footer.blur {
     /*GALERIA*/
     .galeria-title {
         width: 100%;
-        padding: 0 16px;
+        padding: 64px 16px;
     }
     .seccionesCarrusel li {
         height: 96px;
