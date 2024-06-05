@@ -378,6 +378,7 @@ p {
     width: 100%;
     bottom: 0;
     padding: 0;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .tarjetas:hover .detalle {
@@ -1280,7 +1281,7 @@ footer.blur {
     }
     .fecha {
         width: 96px;
-        height: 100%;
+        height: auto;
         justify-content: start;
     }
     .fecha-diaMes {
@@ -1302,10 +1303,18 @@ footer.blur {
     }
     .contenedorTarjetas {
         flex-direction: column;
+        gap: 8px;
+    }
+    .detalle {
     }
     .tarjetas {
+        height: 384px;
         width: 100%;
     }
+    .tarjetas:hover .detalle {
+        transform: none;
+    }
+
     .tituloTarjeta {
         font-size: 20px;
         font-weight: 900;
@@ -1317,6 +1326,9 @@ footer.blur {
     .disco {
         width: 144px;
         height: 144px;
+    }
+    .social-logo-discografia {
+        height: 48px;
     }
     /*VIDEOCLIPS*/
     .youtube-container {
@@ -1349,6 +1361,12 @@ footer.blur {
     .navbar {
         height: 48px;
     }
+    .logo {
+        height: 48px;
+    }
+    .nombreBanda {
+        font-size: 32px;
+    }
     #inicio {
         height: 414px;
     }
@@ -1362,5 +1380,9 @@ footer.blur {
         top: 64px;
         left: 48px;
         margin: 0;
+    }
+    .contenedorTarjetas {
+        flex-direction: row;
+        gap: 0px;
     }
 }
