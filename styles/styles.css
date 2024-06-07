@@ -186,6 +186,7 @@ p {
     min-height: 100%;
     z-index: -1;
     overflow: hidden;
+    background: url('../img/background-1.webp') no-repeat center center;
 }
 .background-video {
     position: absolute;
@@ -197,7 +198,12 @@ p {
     height: auto;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    display: none;
 }
+.video-container video.loaded {
+    display: block; /* Mostrar el video cuando esté cargado */
+}
+
 #player-title {
     text-shadow: 0 2px 4px #00000080;
     transition: none;
