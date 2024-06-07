@@ -23,70 +23,6 @@ const audioFiles = [
   'audio/EsTarde.mp3',
 ];
 
-let audio;
-let currentSongIndex = 0;
-let isPaused = true;
-let audioPosition = 0;
-
-const playerTitle = document.getElementById('player-title');
-const songInfo = document.getElementById('song-info');
-const songTitle = document.getElementById('song-title');
-const playPauseButton = document.getElementById('playPauseButton');
-const playPauseIcon = document.getElementById('playPauseIcon');
-const previousButton = document.getElementById('previousButton');
-const nextButton = document.getElementById('nextButton');
-
-playPauseButton.addEventListener("click", function () {
-  if (isPaused) {
-    if (!audio) {
-      playerTitle.style.display = 'none';
-      songTitle.textContent = songTitles[currentSongIndex];
-      songInfo.style.opacity = 1;
-      audio = new Audio(audioFiles[currentSongIndex]);
-      audio.addEventListener('ended', playNextSong);
-    }
-    audio.play();
-    playPauseIcon.src = "img/pause.svg";
-    isPaused = false;
-  } else {
-    audio.pause();
-    playPauseIcon.src = "img/play_circle.svg";
-    isPaused = true;
-  }
-});
-
-previousButton.addEventListener("click", function () {
-  if (currentSongIndex > 0) {
-    currentSongIndex--;
-  } else {
-    currentSongIndex = audioFiles.length - 1;
-  }
-  updateSongInfo();
-  playSong();
-});
-
-nextButton.addEventListener("click", function () {
-  if (currentSongIndex < audioFiles.length - 1) {
-    currentSongIndex++;
-  } else {
-    currentSongIndex = 0;
-  }
-  updateSongInfo();
-  playSong();
-});
-
-function createAudioElements() {
-  const audio = new Audio(audioFiles[currentSongIndex]);
-  audio.preload = "auto";
-  audio.addEventListener('ended', playNextSong);
-  return audio;
-}
-
-function playNextSong() {
-  currentSongIndex = (currentSongIndex + 1) % audioFiles.length;
-  playSong();
-}
-
 const songTitles = [
   '[DESTINO A] 01 - Bailando entre las nubes',
   '[DESTINO A] 02 - El espectador',
@@ -108,6 +44,60 @@ const songTitles = [
   '[DESTINO B] 10 - Es tarde',
 ];
 
+let audio = null;
+let currentSongIndex = 0;
+let isPaused = true;
+
+const playerTitle = document.getElementById('player-title');
+const songInfo = document.getElementById('song-info');
+const songTitle = document.getElementById('song-title');
+const playPauseButton = document.getElementById('playPauseButton');
+const playPauseIcon = document.getElementById('playPauseIcon');
+const previousButton = document.getElementById('previousButton');
+const nextButton = document.getElementById('nextButton');
+
+playPauseButton.addEventListener("click", () => {
+  if (isPaused) {
+    if (!audio) {
+      playerTitle.style.display = 'none';
+      songTitle.textContent = songTitles[currentSongIndex];
+      songInfo.style.opacity = 1;
+      audio = createAudioElement();
+    }
+    audio.play();
+    playPauseIcon.src = "img/pause.svg";
+    isPaused = false;
+  } else {
+    audio.pause();
+    playPauseIcon.src = "img/play_circle.svg";
+    isPaused = true;
+  }
+});
+
+previousButton.addEventListener("click", () => {
+  currentSongIndex = (currentSongIndex > 0) ? currentSongIndex - 1 : audioFiles.length - 1;
+  updateSongInfo();
+  playSong();
+});
+
+nextButton.addEventListener("click", () => {
+  currentSongIndex = (currentSongIndex < audioFiles.length - 1) ? currentSongIndex + 1 : 0;
+  updateSongInfo();
+  playSong();
+});
+
+function createAudioElement() {
+  const audio = new Audio(audioFiles[currentSongIndex]);
+  audio.preload = "metadata";
+  audio.addEventListener('ended', playNextSong);
+  return audio;
+}
+
+function playNextSong() {
+  currentSongIndex = (currentSongIndex + 1) % audioFiles.length;
+  playSong();
+}
+
 function updateSongInfo() {
   playerTitle.style.display = 'none';
   songTitle.textContent = songTitles[currentSongIndex];
@@ -118,9 +108,8 @@ function playSong() {
   if (audio) {
     audio.pause();
     audio.currentTime = 0;
-    audioPosition = 0;
   }
-  audio = createAudioElements();
+  audio = createAudioElement();
   updateSongInfo();
   audio.play();
   playPauseIcon.src = "img/pause.svg";
@@ -136,3 +125,4 @@ buttons.forEach(button => {
     }, 3000);
   });
 });
+
