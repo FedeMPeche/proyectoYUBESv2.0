@@ -532,7 +532,22 @@ p {
     height: 64px;
 }
 
-/*VIDEOS*/
+/*SECCION VIDEO DE YOUTUBE*/
+/*IMAGEN DE VISTA PREVIA*/
+.preview-image {
+    position: relative;
+    width: 560px; /* Ancho de la imagen de vista previa */
+    height: 315px; /* Altura de la imagen de vista previa */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.preview-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/*ESTILOS PARA EL VIDEO DE YOUTUBE*/
 #youtube {
     background-color: #0a0a0a;
     height: auto;
