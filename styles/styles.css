@@ -173,12 +173,12 @@ p {
 
 /*INICIO*/
 #inicio {
-    background-image: url("../img/pruebaBackInicio.webp");
+    /* background-image: url("../img/pruebaBackInicio.webp");
     background-size: cover;
-    background-position: top;
+    background-position: top; */
     height: 100vh;
 }
-/* .video-container {
+.video-container {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -202,7 +202,7 @@ p {
 }
 .video-container video.loaded {
     display: block; /* Mostrar el video cuando esté cargado */
-
+}
 #player-title {
     text-shadow: 0 2px 4px #00000080;
     transition: none;
