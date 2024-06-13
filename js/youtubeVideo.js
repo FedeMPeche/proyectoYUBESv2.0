@@ -1,6 +1,15 @@
+// Asegúrate de que el script se ejecute después de que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function () {
+    var previewImage = document.getElementById('preview-image');
+
+    previewImage.addEventListener('click', function () {
+        playYouTubeVideo();
+    });
+});
+
 function playYouTubeVideo() {
-    var youtubeContainer = document.getElementById('youtube');
-    var youtubeEmbed = 'https://youtu.be/HwWjmEEh_OA?si=Uhc3wE2iuuvELYur';
+    var previewImageContainer = document.getElementById('preview-image');
+    var youtubeEmbed = 'https://www.youtube.com/embed/HwWjmEEh_OA?autoplay=1'; // URL de embed correcta con autoplay
 
     // Crear un elemento iframe para el video de YouTube
     var iframe = document.createElement('iframe');
@@ -12,6 +21,7 @@ function playYouTubeVideo() {
     iframe.allowFullscreen = true;
 
     // Reemplazar la imagen de vista previa con el iframe del video de YouTube
-    youtubeContainer.innerHTML = '';
-    youtubeContainer.appendChild(iframe);
+    previewImageContainer.innerHTML = '';
+    previewImageContainer.appendChild(iframe);
 }
+
