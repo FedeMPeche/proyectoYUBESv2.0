@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navLinks.forEach((link) => link.classList.remove('active'));
       navLinks[index].classList.add('active');
     } else {
-      console.warn('Índice fuera de rango:', index);
     }
   }
 
