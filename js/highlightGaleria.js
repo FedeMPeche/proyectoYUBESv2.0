@@ -23,5 +23,5 @@ function scrollToSection(event) {
     } else {
       console.warn('El enlace no pertenece a index.html:', targetId);
     }
-  }
+}
   
