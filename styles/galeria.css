@@ -400,6 +400,12 @@ p {
     align-items: center;
     width: 100%;
 }
+
+#whatsappBrn {
+    width: 150px !important;
+    height: auto;
+}
+/* 
 #formularioContacto {
     width: 66%;
     display: flex;
@@ -472,7 +478,7 @@ p {
 
 #enviarBtn h3 {
     cursor: pointer;
-}
+} */
 
 /* REDES SOCIALES DE CONTACTO*/
 
@@ -532,7 +538,7 @@ footer h4 {
     flex-direction: row;
 }
 .dev {
-    width: 128px;
+    width: 92px;
 }
 .dev img {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.75);
