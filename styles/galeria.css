@@ -401,9 +401,9 @@ p {
     width: 100%;
 }
 
-#whatsappBrn {
-    width: 150px !important;
-    height: auto;
+#whatsappBtn {
+    width: 550px ;
+    height: 550px;
 }
 /* 
 #formularioContacto {
