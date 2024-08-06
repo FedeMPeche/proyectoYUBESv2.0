@@ -840,6 +840,8 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 /* Botón de WhatsApp */
@@ -857,21 +859,26 @@ p {
 #whatsappBtn img {
     width: 150px;
     height: 150px;
-    animation: move 1.5s linear infinite;
+    animation: move 2.5s linear infinite;
 }
 
 @keyframes move {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
+    }
+    25% {
+        transform: translateX(calc(100% - 150px)) scale(1.1); /* 100% del contenedor menos el ancho del botón */
     }
     50% {
-        transform: translateX(20px);
+        transform: translateX(calc(200% - 300px)) scale(1); /* 200% del contenedor menos el doble del ancho del botón */
+    }
+    75% {
+        transform: translateX(calc(100% - 150px)) scale(1.3);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
     }
 }
-
 
 /* REDES SOCIALES DE CONTACTO*/
 
