@@ -387,24 +387,61 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding: 64px 0;
-    gap: 48px;
+    padding: 48px 0;
+    gap: 64px;
 }
 
 /*FORMULARIO DE CONTACTO */
 
-#form {
+/* #form {
     display: flex;
-    gap: 24px;
+    gap: 36px;
     flex-direction: column;
     align-items: center;
     width: 100%;
+} */
+
+/* Botón de WhatsApp */
+#whatsappBtn {
+    position: fixed; /* Asegura que el botón esté siempre visible */
+    bottom: 20px; /* Ajusta según sea necesario */
+    right: 20px; /* Ajusta según sea necesario */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    text-align: center;
+    z-index: 1001; /* Asegúrate de que el botón esté por encima de otros elementos */
 }
 
-#whatsappBtn {
-    width: 550px ;
-    height: 550px;
+#whatsappBtn img {
+    width: 100px;
+    height: 100px;
+    animation: move 3s linear infinite;
 }
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#whatsappBtn h4 {
+    font-size: 14px;
+    margin: 0;
+}
+
+
 /* 
 #formularioContacto {
     width: 66%;
@@ -670,7 +707,7 @@ footer h4 {
         gap: 12px;
     }
     .social-logo.contact {
-        height: 36px;
+        height: 50px;
     }
     footer p {
         font-size: 14px;
