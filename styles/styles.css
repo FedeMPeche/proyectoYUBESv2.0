@@ -186,7 +186,7 @@ p {
     min-height: 100%;
     z-index: -1;
     overflow: hidden;
-    background: url('../img/background-1.webp') no-repeat center center;
+    background: url('../img/background-2.webp') no-repeat center center;
 }
 .background-video {
     position: absolute;
