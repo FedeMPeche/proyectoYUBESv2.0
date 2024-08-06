@@ -834,86 +834,35 @@ p {
 
 /*FORMULARIO DE CONTACTO */
 
-#form {
+#WhatsAppContenedor {
     display: flex;
     gap: 24px;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-#formularioContacto {
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.form-group input {
-    font-family: "Roboto Condensed", sans-serif;
-    width: 100%;
-    height: 48px;
-    padding: 12px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    transition: none;
-}
-.form-group input::placeholder {
-    color: black;
-    font-weight: 300;
-}
-.form-group input:focus {
-    border: 4px solid var(--color);
-    transition: none;
-}
-.form-group input:focus::placeholder {
-    color: var(--color);
-    font-weight: 400;
-}
-.form-group textarea {
-    font-family: "Roboto Condensed", sans-serif;
-    width: 100%;
-    height: 192px;
-    padding: 12px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    resize: none;
-    transition: none;
-}
-.form-group textarea::placeholder {
-    color: black;
-    font-weight: 300;
-}
-.form-group textarea:focus {
-    border: 4px solid var(--color);
-    transition: none;
-}
-.form-group textarea:focus::placeholder {
-    color: var(--color);
-    font-weight: 400;
-}
-#enviarBtn {
-    font-family: "Roboto Condensed", sans-serif;
-    width: 100%;
-    height: 64px;
-    background-color: var(--color);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+
+#WhatsAppContenedor h3 {
 }
 
-#enviarBtn h3 {
-    cursor: pointer;
+/* Botón de WhatsApp */
+#whatsappBtn {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    text-align: center;
 }
+
+#whatsappBtn img {
+    width: 150px;
+    height: 150px;
+}
+
 
 /* REDES SOCIALES DE CONTACTO*/
 
@@ -973,7 +922,7 @@ footer h4 {
     flex-direction: row;
 }
 .dev {
-    width: 128px;
+    width: 126px;
 }
 .dev img {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.75);
