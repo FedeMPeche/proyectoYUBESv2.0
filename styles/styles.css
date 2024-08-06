@@ -842,25 +842,34 @@ p {
     width: 100%;
 }
 
-#WhatsAppContenedor h3 {
-}
-
 /* Botón de WhatsApp */
 #whatsappBtn {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px;
     text-align: center;
 }
 
 #whatsappBtn img {
     width: 150px;
     height: 150px;
+    animation: move 1.5s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 

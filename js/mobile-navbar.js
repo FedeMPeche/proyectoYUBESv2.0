@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 0;
 
+    function closeResponsiveMenu() {
+        navbarResponsive.classList.remove('open');
+        if (mainContent) mainContent.classList.remove('blur');
+        if (footerContent) footerContent.classList.remove('blur');
+    }
+
     navbarBoton.addEventListener('click', () => {
         navbarResponsive.classList.toggle('open');
         if (mainContent) mainContent.classList.toggle('blur');
@@ -16,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     menuLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
+        const handleClick = (event) => {
             event.preventDefault();
             const href = link.getAttribute('href');
 
@@ -33,21 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
 
-                navbarResponsive.classList.remove('open');
-                if (mainContent) mainContent.classList.remove('blur');
-                if (footerContent) footerContent.classList.remove('blur');
+                closeResponsiveMenu();
             }
-        });
+        };
+
+        link.addEventListener('click', handleClick);
+        link.addEventListener('touchstart', handleClick);
     });
 
     document.addEventListener('click', (event) => {
         const target = event.target;
         if (!navbarResponsive.contains(target) && !navbarBoton.contains(target)) {
-            navbarResponsive.classList.remove('open');
-            if (mainContent) mainContent.classList.remove('blur');
-            if (footerContent) footerContent.classList.remove('blur');
+            closeResponsiveMenu();
         }
     });
 });
+
+
 
   

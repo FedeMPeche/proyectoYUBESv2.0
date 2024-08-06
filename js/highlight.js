@@ -55,3 +55,4 @@ document.addEventListener('DOMContentLoaded', function () {
   // Actualizar el estado de la navegación al desplazarse
   window.addEventListener('scroll', changeActiveLink);
 });
+
