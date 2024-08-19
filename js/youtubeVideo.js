@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function playYouTubeVideo() {
     var previewImageContainer = document.getElementById('preview-image');
-    var youtubeEmbed = 'https://www.youtube.com/embed/HwWjmEEh_OA?autoplay=1'; // URL de embed correcta con autoplay
+    var youtubeEmbed = 'https://www.youtube.com/embed/LL34IlZkEvg?si=X3IGOE3NpyPeT9BA&autoplay=1'; // URL de embed con autoplay
 
     // Crear un elemento iframe para el video de YouTube
     var iframe = document.createElement('iframe');
@@ -24,4 +24,5 @@ function playYouTubeVideo() {
     previewImageContainer.innerHTML = '';
     previewImageContainer.appendChild(iframe);
 }
+
 
