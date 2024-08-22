@@ -1376,7 +1376,7 @@ footer.blur {
         text-align: start;
     }
     .botonYubes {
-        width: 75%;
+        width: 100%;
     }
     .botonYubes h4 {
         font-size: 18px;
@@ -1501,6 +1501,6 @@ footer.blur {
         text-align: start;
     }
     .botonYubes {
-        width: 75%;
+        width: 100%;
     }
 }
