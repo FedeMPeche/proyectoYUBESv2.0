@@ -1298,12 +1298,28 @@ footer.blur {
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
     /*Fuentes*/
-    h4 {
-        font-size: 20px;
+    h1 {
+        font-size: 36px;
         cursor: default;
+        transition: none;
+    }
+    h2 {
+        font-size: 24px;
+        cursor: default;
+        transition: none;
+    }
+    h3 {
+        font-size: 18px;
+        cursor: default;
+        transition: none;
+    }
+    h4 {
+        font-size: 12px;
+        cursor: default;
+        transition: none;
     }
     h5 {
-        font-size: 16px;
+        font-size: 10px;
         cursor: default;
     }
     a {
@@ -1350,14 +1366,20 @@ footer.blur {
         height: 100%;
     }
     .diaFecha {
-        font-size: 64px;
+        font-size: 48px;
         height: 48px;
+    }
+    .mesFecha {
+        font-size: 18px;
     }
     .detalleFecha {
         text-align: start;
     }
     .botonYubes {
-        width: 100%;
+        width: 75%;
+    }
+    .botonYubes h4 {
+        font-size: 18px;
     }
     /*BANDA*/
     .banda-content p {
@@ -1368,7 +1390,7 @@ footer.blur {
         gap: 8px;
     }
     .tarjetas {
-        height: 384px;
+        height: 412px;
         width: 100%;
     }
     .tarjetas:hover .detalle {
@@ -1398,6 +1420,9 @@ footer.blur {
     .video-info {
         flex-direction: column;
         gap: 64px;
+    }
+    .video-info h4 {
+        font-size: 18px;
     }
     /*GALERIA*/
     .galeria-title {
@@ -1444,5 +1469,38 @@ footer.blur {
     .contenedorTarjetas {
         flex-direction: row;
         gap: 0px;
+    }
+    /*SHOWS*/
+    #shows {
+        display: column;
+        height: auto;
+        gap: 16px;
+    }
+    .proximosShows {
+        flex-direction: column;
+        gap: 16px;
+        padding: 64px 16px;
+    }
+    .show-info {
+        gap: 16px;
+        width: 100%;
+    }
+    .fecha {
+        width: 96px;
+        height: auto;
+        justify-content: start;
+    }
+    .fecha-diaMes {
+        height: 100%;
+    }
+    .diaFecha {
+        font-size: 64px;
+        height: 48px;
+    }
+    .detalleFecha {
+        text-align: start;
+    }
+    .botonYubes {
+        width: 75%;
     }
 }
