@@ -186,7 +186,7 @@ p {
     min-height: 100%;
     z-index: -1;
     overflow: hidden;
-    background: url('../img/background-2.webp') no-repeat center center;
+    background: url("../img/background-2.webp") no-repeat center center;
 }
 .background-video {
     position: absolute;
@@ -241,10 +241,11 @@ p {
         rgba(26, 26, 26, 1) 0%,
         rgba(10, 10, 10, 1) 66%
     );
-    height: 100vh;
+    height: auto;
+    padding: 64px 0;
 }
 .showsContainer {
-    max-height: 786px !important;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,8 +260,15 @@ p {
 .tituloPintado {
     color: var(--color);
 }
-
-.proximosShows {
+.tarjetasContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.tarjetaShow {
     width: 924px;
     height: 244px;
     border-radius: 16px;
@@ -744,26 +752,24 @@ p {
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     overflow-y: auto;
-  }
-  
-  .expanded-img-container img {
+}
+
+.expanded-img-container img {
     max-width: 80%;
     max-height: 80vh;
     object-fit: contain;
-  }
-  
-  .swipe-text {
+}
+
+.swipe-text {
     position: absolute;
-    top: 78px; 
+    top: 78px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.75);
     font-size: 18px;
     font-weight: bold;
-  }
-  
-
+}
 
 /*Efectos de expandido de imagen y blur al fondo */
 
@@ -1006,7 +1012,7 @@ footer h4 {
         min-height: 0;
     }
     /*SHOWS*/
-    .proximosShows {
+    .tarjetaShow {
         width: 840px;
         padding: 48px;
     }
@@ -1187,7 +1193,7 @@ footer h4 {
     .showsContainer {
         width: 100%;
     }
-    .proximosShows {
+    .tarjetaShow {
         width: 100%;
         border-radius: 0;
     }
@@ -1348,10 +1354,11 @@ footer.blur {
         height: auto;
         gap: 16px;
     }
-    .proximosShows {
+    .tarjetaShow {
+        height: auto;
         flex-direction: column;
         gap: 16px;
-        padding: 64px 16px;
+        padding: 16px;
     }
     .show-info {
         gap: 16px;
@@ -1476,7 +1483,7 @@ footer.blur {
         height: auto;
         gap: 16px;
     }
-    .proximosShows {
+    .tarjetasContainer {
         flex-direction: column;
         gap: 16px;
         padding: 64px 16px;
