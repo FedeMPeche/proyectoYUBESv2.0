@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function playYouTubeVideo() {
     var previewImageContainer = document.getElementById('preview-image');
-    var youtubeEmbed = 'https://www.youtube.com/embed/LL34IlZkEvg?si=X3IGOE3NpyPeT9BA&autoplay=1'; // URL de embed con autoplay
+    var youtubeEmbed = 'https://www.youtube.com/embed/wQbAWp71uM0?si=DuHJlQgB6tviuQnZ&autoplay=1'; // URL de embed con autoplay
 
     // Crear un elemento iframe para el video de YouTube
     var iframe = document.createElement('iframe');

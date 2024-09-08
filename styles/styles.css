@@ -1031,6 +1031,9 @@ footer h4 {
         height: 288px;
     }
     /*VIDEO*/
+    .youtube-container{
+        gap: auto;
+    }
     .video-info {
         width: 100%;
     }
