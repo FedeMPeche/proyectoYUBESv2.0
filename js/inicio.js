@@ -1,5 +1,12 @@
 'use strict';
 
+grecaptcha.ready(function() {
+  grecaptcha.execute('6LdpdDwqAAAAADOZ6ydz5qpnwPu2R3jlB6NACRR7', { action: 'homepage' }).then(function(token) {
+      // Aquí podrías enviar este token a tu backend para validarlo
+      console.log(token); // Token generado
+  });
+});
+
 // ---------------- AUDIO PLAYER -------------------------------------
 
 const audioFiles = [
